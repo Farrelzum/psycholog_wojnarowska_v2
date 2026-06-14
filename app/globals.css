@@ -8,6 +8,7 @@
 
   /* Twoje kolory gabinetu */
   --color-warm-brown: hsl(var(--warm-brown));
+  --color-light-green: hsl(var(--light-green));
   --color-soft-beige: hsl(var(--soft-beige));
   --color-cream: hsl(var(--cream));
   --color-warm-accent: hsl(var(--warm-accent));
@@ -26,17 +27,25 @@
 
     /* Custom therapy website colors */
     --warm-brown: 146 50% 36%;
+    --light-green: 144 39% 50%;
     --soft-beige: 45 18% 85%;
     --cream: 45 20% 96%;
     --warm-accent: 146 40% 60%;
     --pearl: 40 25% 98%;
-    --gold: 45 75% 55%;
-    --gold-light: 43 85% 70%;
+    --gold-dark: 43 60% 55%;
+    --gold: 43 74% 49%;
+    --gold-light: 43 80% 60%;
+    --gold-highlight: 46 90% 85%;
     
     /* Gradients */
     --gradient-warm: linear-gradient(135deg, hsl(var(--warm-brown)), hsl(var(--warm-accent)));
     --gradient-subtle: linear-gradient(180deg, hsl(var(--pearl)), hsl(var(--cream)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-gold: linear-gradient(
+      110deg, 
+      hsl(var(--gold)) 0%, 
+      hsl(var(--gold-highlight)) 40%, 
+      hsl(var(--gold-dark)) 100%
+    );
     
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(var(--warm-brown) / 0.15);
