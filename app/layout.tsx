@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/layout/Navbar";
 import "./globals.css";
+import Header from "@/components/layout/Header";
 
 export const metadata: Metadata = {
   title: "psycholog-wjonarowska.pl",
@@ -17,7 +17,7 @@ export default function RootLayout({
       lang="pl"
     >
       <body className="min-h-full flex flex-col">
-        <Navbar/>
+        <Header/>
         {children}
         </body>
     </html>

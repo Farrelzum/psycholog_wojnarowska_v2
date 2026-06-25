@@ -30,7 +30,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className='absolute top-full left-0 w-full h-[calc(100dvh-4rem)] bg-light-green/90 flex flex-col justify-start items-start py-8 px-4 shadow-md -z-10 backdrop-blur-md overflow-hidden' 
+            className='absolute top-full left-0 w-full h-[calc(100dvh-4rem)] bg-light-green flex flex-col justify-start items-start py-8 px-4 shadow-md -z-10 backdrop-blur-md overflow-hidden' 
             aria-label="Menu mobilne">
             <div className="flex w-full justify-between items-start flex-1">
                 <ul className='flex flex-col gap-8 relative z-10 ml-4 whitespace-nowrap'>
@@ -102,9 +102,29 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                     </AnimatePresence>
                 </div>
             </div>
-            <div className='flex gap-2 mt-auto justify-center w-full'>
-                <motion.a href="tel:+48798763715" className='flex items-center gap-2 border rounded-md text-white p-2' whileTap={{ scale: 0.95 }}><Phone size={18} /> Zadzwoń</motion.a>
-                <motion.button type="button" className='flex items-center gap-2 bg-gold-light rounded-md text-white p-2' onClick={() => alert("Tymczasowy znacznik: Otwieram formularz!")} whileTap={{ scale: 0.95 }}><PenTool size={18}/> Napisz do mnie</motion.button>
+            <div className='flex gap-2 mt-auto justify-evenly w-full'>
+                <motion.a
+                    href="tel:+48798763715"
+                    className='
+                        flex items-center gap-2
+                        border rounded-md text-white p-2'
+                    whileHover={{ y: -5 }}
+                    whileTap={{ scale: 0.95 }}
+                >
+                    <Phone size={18} />Zadzwoń
+                </motion.a>
+                <motion.button 
+                    type="button"
+                    className='
+                        flex items-center gap-2
+                        bg-gold-light rounded-md
+                        text-white p-2'
+                        onClick={() => alert("Tymczasowy znacznik: Otwieram formularz!")}
+                        whileHover={{ y: -5 }}
+                        whileTap={{ scale: 0.95 }}
+                >
+                    <PenTool size={18}/> Napisz do mnie
+                </motion.button>
             </div>
         </motion.nav>
     );

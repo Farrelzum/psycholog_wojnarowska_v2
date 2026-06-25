@@ -1,37 +1,42 @@
 'use client'
 
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, Play, Sun } from 'lucide-react';
-import { useRef, useState } from 'react';
-import MenuMobile from './MenuMobile';
-import Logo from '../ui/Logo';
-import { offers } from '../../lib/offers';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import { useOnClickOutside } from "@/hooks/useOnClickOutside";
+import { offers } from "@/lib/offers";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, Play, Sun } from "lucide-react";
+import Link from "next/link";
+import Logo from "../ui/Logo";
+import { useRef } from "react";
 
-export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
-    const [isOfertaOpen, setIsOfertaOpen] = useState(false);
+interface NavProps {
+    isOpen: boolean;
+    isOfertaOpen: boolean;
+    setIsOpen: (bool: boolean) => void;
+    setIsOfertaOpen: (bool: boolean) => void;
+    toggleIsOpen: () => void;
+    toggleIsOfertaOpen: () => void;
+}
 
+export default function NavBar({
+    isOpen,
+    isOfertaOpen,
+    setIsOpen,
+    setIsOfertaOpen,
+    toggleIsOpen,
+    toggleIsOfertaOpen
+}: NavProps) {
     const dropdownRef = useRef<HTMLLIElement>(null);
 
-    useOnClickOutside(dropdownRef, () => setIsOfertaOpen(false));
-
-    const toggleIsOpen = () => {
-        setIsOpen(prev => !prev);
-        setIsOfertaOpen(false);
-    }
-
-    const toggleIsOfertaOpen = () => {
-        setIsOfertaOpen(prev => !prev);
-    }
-
-
+    useOnClickOutside(dropdownRef, () => {
+        if (!isOpen) {
+            setIsOfertaOpen(false);
+        }
+    });
+    
     return (
-        <header className='relative w-full z-50'>
             <nav className='
                 relative flex justify-between items-center
-                h-16 px-8 md:px-10 lg:px-16 py-2 bg-light-green shadow-sm z-50'
+                h-16 px-8 md:px-10 lg:px-16 py-2 bg-emerald-600 shadow-sm'
             >
                 <Logo textClassName='text-sm md:text-base' onClick={() => setIsOpen(false)}/>
                 <ul className='
@@ -82,7 +87,7 @@ export default function Navbar() {
                                                     flex items-center gap-2
                                                     text-white hover:text-gold-light
                                                     text-sm font-medium opacity-90"
-                                                    onClick={toggleIsOfertaOpen}
+                                                    onClick={() => setIsOfertaOpen(false)}
                                                 >
                                                     <item.Icon size={16} /> {item.name}
                                                 </Link>
@@ -147,16 +152,5 @@ export default function Navbar() {
                     </AnimatePresence>
                 </button>
             </nav>
-
-            <AnimatePresence>
-                {isOpen && 
-                <MenuMobile 
-                    onClose={toggleIsOpen}
-                    isOfertaOpen={isOfertaOpen}
-                    toggleOferta={toggleIsOfertaOpen}
-                />}
-            </AnimatePresence>
-        </header>
-
     );
 }
