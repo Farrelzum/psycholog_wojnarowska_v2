@@ -14,7 +14,7 @@ export default function Logo({ className = '', textClassName = '', onClick, hide
         <Link 
             href="/" 
             onClick={onClick}
-            className={`flex items-center gap-2 transition-opacity duration-300 ease-in-out hover:opacity-80 ${className}`}
+            className={`flex items-center gap-2 transition-opacity duration-300 ease-in-out hover:opacity-80 rounded btn-focus ${className}`}
         >
             <Image 
                 src={logoImg} 

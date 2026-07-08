@@ -49,7 +49,8 @@ export default function NavBar({
                             className='
                                 text-white hover:text-gold
                                 transition-colors duration-500 ease-in-out
-                                lg:font-medium lg:text-lg'
+                                lg:font-medium lg:text-lg
+                                rounded btn-focus'
                             >O mnie</Link>
                     </li>
                     <li ref={dropdownRef} className='relative'>
@@ -59,7 +60,8 @@ export default function NavBar({
                                 flex items-center gap-1
                                 text-white hover:text-gold
                                 transition-colors duration-500 ease-in-out
-                                lg:font-medium lg:text-lg"
+                                lg:font-medium lg:text-lg
+                                rounded btn-focus"
                         >
                             Oferta
                             <motion.div animate={{ rotate: isOfertaOpen ? 90 : 0 }}>
@@ -86,7 +88,7 @@ export default function NavBar({
                                                     className="
                                                     flex items-center gap-2
                                                     text-white hover:text-gold-light
-                                                    text-sm font-medium opacity-90"
+                                                    text-sm font-medium opacity-90 rounded btn-focus"
                                                     onClick={() => setIsOfertaOpen(false)}
                                                 >
                                                     <item.Icon size={16} /> {item.name}
@@ -103,7 +105,7 @@ export default function NavBar({
                             className="
                                 text-white hover:text-gold
                                 transition-colors duration-500 ease-in-out
-                                lg:font-medium lg:text-lg"
+                                lg:font-medium lg:text-lg rounded btn-focus"
                             >Dla rodziców</Link>
                     </li>
                     <li>
@@ -112,7 +114,7 @@ export default function NavBar({
                             className="
                                 text-white hover:text-gold
                                 transition-colors duration-500 ease-in-out
-                                lg:font-medium lg:text-lg"
+                                lg:font-medium lg:text-lg rounded btn-focus"
                             >Cennik</Link>
                     </li>
                     <li>
@@ -121,7 +123,7 @@ export default function NavBar({
                             className='
                                 text-white hover:text-gold
                                 transition-colors duration-500 ease-in-out
-                                lg:font-medium lg:text-lg'
+                                lg:font-medium lg:text-lg rounded btn-focus'
                             >Kontakt</Link>
                     </li>
                 </ul>

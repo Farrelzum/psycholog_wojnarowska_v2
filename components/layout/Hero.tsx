@@ -11,15 +11,17 @@ export default function Hero() {
         <section className="relative w-full min-h-[calc(100vh-4rem)] shadow-lg overflow-hidden">
             <Image 
                 src={hero_bg} 
-                alt="Tło" 
+                alt="" 
                 fill 
-                className="-z-10 object-cover" 
+                className="-z-10 object-cover md:scale-110" 
                 priority
             />
-            <div className="container mx-auto relative z-10 grid grid-cols-1 md:gap-[2rem] lg:grid-cols-2 min-h-[calc(100vh-4rem)] items-start">
+            <div className="container mx-auto relative z-10 grid grid-cols-1 md:gap-[2rem] md:grid-cols-2 min-h-[calc(100vh-4rem)] items-start">
                 
-                <div>
-                    <h1 className="text-4xl lg:text-5xl text-green-800 m-10 font-serif leading-tight">
+                <div className='md:col-span-2'>
+                    <h1 className="
+                    text-[5dvh] md:text-[8dvh]
+                    text-green-800 m-10 font-serif leading-tight">
                         Wspólnie stwórzmy <br/>
                         <span className="font-bold">Twoją drogę</span> <br/>
                         do lepszego jutra
@@ -28,9 +30,10 @@ export default function Hero() {
                         type="button"
                         className='
                             flex items-center gap-2
-                            place-self-end mr-12
+                            place-self-start ml-10
                             bg-green-700 rounded-md
-                            text-soft-beige p-2 font-serif'
+                            text-soft-beige p-2 font-serif
+                            btn-focus'
                             onClick={() => alert("Tymczasowy znacznik: Otwieram formularz!")}
                             whileHover={{ y: -5 }}
                             whileTap={{ scale: 0.95 }}
@@ -38,13 +41,18 @@ export default function Hero() {
                         <PenTool size={18}/> Umów się
                     </motion.button>
                 </div>
-                <Image 
-                    src={therapist_img}
-                    alt="Psycholog Barbara Wojnarowska"
-                    className="absolute bottom-0 left-0 w-2/3 lg:w-[40%] object-contain drop-shadow-2xl brightness-90 saturate-120"
-                />
-                
             </div>
+            <Image 
+                src={therapist_img}
+                alt="Psycholog Barbara Wojnarowska"
+                className="
+                    absolute bottom-0 right-0
+                    max-w-[66%] max-h-[70%]
+                    -scale-x-100 md:w-[30%] md:max-h-full
+                    lg:w-[50%]
+                    object-contain object-left-bottom drop-shadow-2xl brightness-90 saturate-[1.2]"
+                priority
+            />
         </section>
     );
 }

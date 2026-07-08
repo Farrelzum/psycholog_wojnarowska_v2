@@ -35,15 +35,25 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
             <div className="flex w-full justify-between items-start flex-1">
                 <ul className='flex flex-col gap-8 relative z-10 ml-4 whitespace-nowrap'>
                     <li>
-                        <Link href="/" className="text-xl text-white font-medium" onClick={onClose}>Strona główna</Link>
+                        <Link 
+                            href="/"
+                            className="
+                                text-xl text-white font-medium
+                                rounded btn-focus" 
+                            onClick={onClose}>Strona główna</Link>
                     </li>
                     <li>
-                        <Link href="/o-mnie" className="text-xl text-white font-medium" onClick={onClose}>O mnie</Link>
+                        <Link 
+                            href="/o-mnie"
+                            className="
+                                text-xl text-white font-medium
+                                rounded btn-focus"
+                            onClick={onClose}>O mnie</Link>
                     </li>
                     <li>
                         <button 
                             onClick={toggleOferta}
-                            className="text-xl text-white font-medium flex items-center gap-1"
+                            className="text-xl text-white font-medium flex items-center gap-1 btn-focus"
                         >
                             Oferta
                             <motion.div animate={{ rotate: isOfertaOpen ? 0 : 90 }}>
@@ -52,13 +62,28 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                         </button>
                     </li>
                     <li>
-                        <Link href="/dla-rodzicow" className="text-xl text-white font-medium" onClick={onClose}>Dla rodziców</Link>
+                        <Link
+                            href="/dla-rodzicow"
+                            className="
+                                text-xl text-white font-medium
+                                rounded btn-focus"
+                            onClick={onClose}>Dla rodziców</Link>
                     </li>
                     <li>
-                        <Link href="/cennik" className="text-xl text-white font-medium" onClick={onClose}>Cennik</Link>
+                        <Link
+                            href="/cennik"
+                            className="
+                                text-xl text-white font-medium
+                                rounded btn-focus"
+                            onClick={onClose}>Cennik</Link>
                     </li>
                     <li>
-                        <Link href="/kontakt" className="text-xl text-white font-medium" onClick={onClose}>Kontakt</Link>
+                        <Link
+                            href="/kontakt"
+                            className="
+                                text-xl text-white font-medium
+                                rounded btn-focus"
+                            onClick={onClose}>Kontakt</Link>
                     </li>
                 </ul>
                 <div className="relative flex-1 h-full ml-4">
@@ -80,7 +105,8 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                                             className="
                                                 flex items-center gap-2
                                                 text-white hover:text-gold-light text-sm
-                                                font-medium opacity-90"
+                                                font-medium opacity-90
+                                                rounded btn-focus"
                                         >
                                             <item.Icon size={16} /> {item.name}
                                         </Link>
@@ -94,7 +120,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                                 animate={{ opacity: 1 }}
                                 exit={{ opacity: 0 }}
                                 transition={{ duration: 0.3 }}
-                                className="absolute right-[10%] top-[-10%] pointer-events-none"
+                                className="absolute right-[10%] top-[-5%] pointer-events-none"
                             >
                                 <LogoSVG className="w-48 h-48 text-white opacity-20" />
                             </motion.div>
