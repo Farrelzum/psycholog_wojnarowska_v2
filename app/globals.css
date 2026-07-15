@@ -71,6 +71,10 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   }
+
+  h1 {
+    @apply text-[5dvh] md:text-[8dvh] text-green-800 font-serif leading-tight;
+  }
 }
 
 @layer components {
@@ -84,6 +88,12 @@
 
   .btn-focus {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  .min-h-page {
+    min-height: calc(100vh - 4rem);
   }
 }
 
