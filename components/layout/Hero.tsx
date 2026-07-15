@@ -2,7 +2,6 @@ import hero_bg from '../../public/hero_bg_2.png'
 import therapist_img from '../../public/therapist-portrait.png'
 import Image from 'next/image';
 import FormButton from '../ui/FormButton';
-import { PenTool } from 'lucide-react';
 
 export default function Hero() {
     return (
@@ -22,11 +21,7 @@ export default function Hero() {
                         <span className="font-bold">Twoją drogę</span> <br/>
                         do lepszego jutra
                     </h1>
-                <FormButton 
-                    className="place-self-start ml-10"
-                >
-                    <PenTool size={18}/> Umów się
-                </FormButton>
+                <FormButton />
                 </div>
             </div>
             <Image 

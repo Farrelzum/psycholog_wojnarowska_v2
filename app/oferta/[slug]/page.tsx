@@ -1,3 +1,4 @@
+import FormButton from '@/components/ui/FormButton';
 import Image from 'next/image';
 
 export default async function OfferPage({ params }: { params: Promise<{ slug: string }> }) {

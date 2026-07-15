@@ -1,12 +1,9 @@
 "use client"
 
 import { motion, HTMLMotionProps } from 'framer-motion';
+import { PenTool } from 'lucide-react';
 
-interface FormButtonProps extends HTMLMotionProps<"button"> {
-    children: React.ReactNode;
-}
-
-export default function FormButton({ children, className = '', ...props }: FormButtonProps) {
+export default function FormButton({ className = '', ...props }: HTMLMotionProps<"button">) {
     return (
         <motion.button
             className={`flex items-center gap-2 bg-green-700 rounded-md text-soft-beige p-2 font-serif btn-focus ${className}`}
@@ -15,7 +12,7 @@ export default function FormButton({ children, className = '', ...props }: FormB
             onClick={() => alert("Tymczasowy znacznik: Otwieram formularz!")}
             {...props}
         >
-            {children}
+            <PenTool size={18}/> Umów się
         </motion.button>
     );
 }
