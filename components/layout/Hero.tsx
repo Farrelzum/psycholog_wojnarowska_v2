@@ -21,7 +21,7 @@ export default function Hero() {
                         <span className="font-bold">Twoją drogę</span> <br/>
                         do lepszego jutra
                     </h1>
-                <FormButton />
+                <FormButton className='ml-10'/>
                 </div>
             </div>
             <Image 
