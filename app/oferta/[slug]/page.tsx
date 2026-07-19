@@ -1,9 +1,39 @@
 import bg from '../../../public/background.png';
 import FormButton from '@/components/ui/FormButton';
 import Image from 'next/image';
+import { offers } from '@/lib/offers';
+import { notFound } from 'next/navigation';
+import { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const offer = offers.find((of) => resolvedParams.slug === of.slug);
+
+  if (!offer) {
+    return {
+      title: 'Nie znaleziono oferty',
+    };
+  }
+
+  return {
+    title: offer.name,
+    description: offer.description.substring(0, 160) + '...',
+    openGraph: {
+      title: offer.name,
+      description: offer.description.substring(0, 160) + '...',
+      images: [offer.image],
+    },
+  };
+}
 
 export default async function OfferPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
+  const offer = offers.find((of) => resolvedParams.slug === of.slug);
+
+  if (!offer) {
+    notFound();
+  }
+
   return (
     <article className="
       relative w-full min-h-page shadow-lg overflow-hidden
@@ -21,21 +51,21 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
         flex flex-row items-center mt-4
         md:col-span-2 md:row-start-1 md:w-full md:max-w-[75ch] md:mx-auto'>
         <Image
-          src="/adhd_diagnosis.png"
-          alt='Diagnoza ADHD'
+          src={offer.image}
+          alt={offer.name}
           className='h-[100px] w-[100px]'
           width={300}
           height={300}
           priority
         />
-        <h1>Diagnoza ADHD</h1>
+        <h1>{offer.name}</h1>
       </div>
       <p className='
         m-4 text-justify text-green-800
         max-w-[75ch] md:mx-auto
         md:col-span-2 md:row-start-2 md:m-0'
       >
-          Wiem, jak wyczerpujące bywa codzienne zmaganie się z natłokiem myśli i poczuciem, że Twój umysł nigdy nie odpoczywa. W mojej pracy do diagnozy ADHD podchodzę przede wszystkim z empatią, rzetelnością i uważnością na Twoje granice. Zależy mi na tym, abyś podczas naszych spotkań czuł się bezpiecznie i komfortowo - to przestrzeń, w której wspólnie, w spokojnym tempie, przyjrzymy się Twoim doświadczeniom. Nie oceniam, lecz pomagam zrozumieć, w jaki sposób funkcjonuje Twój układ nerwowy. Celem diagnozy nie jest przyklejenie etykiety, ale znalezienie odpowiedzi, które pozwolą Ci odzyskać równowagę i lepiej zadbać o siebie w codziennym życiu.
+          {offer.description}
       </p>
       <div className='
         flex flex-col
@@ -44,7 +74,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
         <p
           className='ml-4 text-left text-green-800 font-bold'
         >
-          Koszt: 200
+          Koszt: {offer.price}
         </p>
         <FormButton className='m-4 md:self-end'/>
         </div>
