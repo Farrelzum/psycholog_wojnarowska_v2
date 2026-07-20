@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { AnimatePresence, motion }from 'framer-motion';
 import { Phone, PenTool, Play } from 'lucide-react';
-import { offers } from '../../lib/offers';
+import { offers } from '../../lib/constants/offers';
 import LogoSVG from "../ui/LogoSVG";
 import { useEffect } from "react";
 

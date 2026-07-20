@@ -1,7 +1,7 @@
 'use client'
 
 import { useOnClickOutside } from "@/hooks/useOnClickOutside";
-import { offers } from "@/lib/offers";
+import { offers } from "@/lib/constants/offers";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, Play, Sun } from "lucide-react";
 import Link from "next/link";

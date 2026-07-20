@@ -1,7 +1,7 @@
 import bg from '../../../public/background.png';
 import FormButton from '@/components/ui/FormButton';
 import Image from 'next/image';
-import { offers } from '@/lib/offers';
+import { offers } from '@/lib/constants/offers';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
 
@@ -37,7 +37,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
   return (
     <article className="
       relative w-full min-h-page shadow-lg overflow-hidden
-      flex flex-col justify-start items-start
+      flex flex-col justify-start items-start pt-4
       md:grid md:grid-cols-2 md:auto-rows-max md:gap-6 md:px-[4rem]"
     >
       <Image 
@@ -53,7 +53,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
         <Image
           src={offer.image}
           alt={offer.name}
-          className='h-[100px] w-[100px]'
+          className='h-[100px] w-[100px] mr-3'
           width={300}
           height={300}
           priority
