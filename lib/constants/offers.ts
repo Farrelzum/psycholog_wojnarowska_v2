@@ -1,14 +1,8 @@
-import { Brain, ClipboardList, Puzzle, Handshake, Baby, Heart, Scale, LucideIcon } from 'lucide-react';
+import { Brain, ClipboardList, Puzzle, Handshake, Baby, Heart, Scale } from 'lucide-react';
+import { Offer } from '../types/Offer';
 
-interface Offer {
-        name: string;
-        description: string;
-        price: string;
-        path: string;
-        Icon: LucideIcon;
-        image: string;
-        slug: string;
-}
+
+
 
 export const offers: Offer[] = [
         {
