@@ -1,4 +1,3 @@
-import bg from '../../../public/background.png';
 import FormButton from '@/components/ui/FormButton';
 import Image from 'next/image';
 import { offers } from '@/lib/constants/offers';
@@ -40,13 +39,6 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
       flex flex-col justify-start items-start pt-4
       md:grid md:grid-cols-2 md:auto-rows-max md:gap-6 md:px-[4rem]"
     >
-      {/* <Image 
-        src={bg} 
-        alt="" 
-        fill 
-        className="-z-10 object-cover md:scale-110" 
-        priority
-      /> */}
       <div className='
         flex flex-row items-center mt-4
         md:col-span-2 md:row-start-1 md:w-full md:max-w-[75ch] md:mx-auto'>
