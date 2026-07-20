@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
+import Image from 'next/image';
+import bg from '../public/background.png';
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://psycholog-wojnarowska.pl"),
@@ -61,6 +63,15 @@ export default function RootLayout({
             })
           }}
         />
+        <div className="fixed inset-0 -z-10">
+          <Image 
+            src={bg} 
+            alt="" 
+            fill 
+            className="object-cover object-center" 
+            priority
+          />
+        </div>
         <Header/>
         {children}
         </body>
