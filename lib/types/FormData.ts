@@ -3,4 +3,5 @@ export interface FormData {
     email: string;
     phone: string;
     message: string;
+    honey?: string;
 }

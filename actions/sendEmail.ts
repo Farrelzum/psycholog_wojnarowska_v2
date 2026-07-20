@@ -4,7 +4,12 @@ import { transporter } from '../lib/services/transporter';
 import { FormData } from '@/lib/types/FormData';
 
 export async function sendEmail(formData: FormData) {
-    const { name, email, phone, message } = formData;
+    const { name, email, phone, message, honey } = formData;
+
+    if (honey) {
+        console.log("Bot has been catched!");
+        return { success: true }; 
+    }
 
     const mailToTherapist = {
         from: process.env.SMTP_USER,
