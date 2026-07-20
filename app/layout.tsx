@@ -40,7 +40,7 @@ export default function RootLayout({
     <html
       lang="pl"
     >
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-page flex flex-col">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

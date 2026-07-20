@@ -1,7 +1,16 @@
+import { Metadata } from "next";
+import ContactForm from "@/components/ui/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description: "Skontaktuj się z gabinetem psychologicznym...",
+};
+
 export default function ContactPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8">
-      <h1 className="text-3xl text-warm-brown">Kontakt</h1>
+    <main className="max-w-3xl mx-auto px-4 py-6 min-h-page">
+      <h1 className="text-3xl font-bold text-center mb-4">Napisz do mnie</h1>
+      <ContactForm />
     </main>
   );
 }
