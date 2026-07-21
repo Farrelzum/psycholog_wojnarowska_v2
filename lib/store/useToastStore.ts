@@ -11,7 +11,7 @@ interface ToastState {
 
 let timer: ReturnType<typeof setTimeout> | null = null;
 
-export const useToastState = create<ToastState>((set, get) => ({
+export const useToastStore = create<ToastState>((set, get) => ({
     isVisible: false,
     message: '',
     status: 'idle',
