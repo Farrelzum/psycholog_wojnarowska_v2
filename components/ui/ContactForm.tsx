@@ -1,10 +1,61 @@
 'use client'
 
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { UserData } from '../../lib/types/UserData';
+import { sendEmail } from '@/actions/sendEmail';
+
 export default function ContactForm() {
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus]
+        = useState<'idle' | 'success' | 'error'>('idle');
+
+    const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+        e.preventDefault();
+
+        const form = e.currentTarget;
+
+        setIsSubmitting(true);
+
+        const formData = new FormData(e.currentTarget);
+
+        if (formData.get('honey')) {
+            setStatus('success');
+            setIsSubmitting(false);
+            return;
+        }
+
+        const userData: UserData = {
+            name: String(formData.get('name')),
+            email: String(formData.get('email')),
+            phone: formData.get('phone') ?
+                String(formData.get('phone')) : '',
+            message: String(formData.get('message')),
+            rodo: formData.get('rodo') === 'on' ? true : false,
+        }
+
+        try {
+            const result = await sendEmail(userData);
+            if (!result.success) {
+                throw new Error("Server sending error");
+            }
+            setStatus('success');
+            form.reset();
+        } catch {
+            setStatus('error');
+        } finally {
+            setIsSubmitting(false);
+        }
+    }
+
     return (
-        <form className="flex flex-col gap-4 md:grid md:grid-cols-2 md:gap-x-[2rem] md:gap-y-[1.25rem] w-full max-w-4xl mx-auto">
-            
-            {/* Lewa kolumna: Imię */}
+        <form 
+            className="
+                flex flex-col gap-4
+                md:grid md:grid-cols-2 md:gap-x-[2rem] md:gap-y-[1.25rem] w-full max-w-4xl mx-auto"
+            onSubmit={handleSubmit}
+
+        >
             <div className="flex flex-col gap-1 md:gap-[0.5rem]">
                 <label htmlFor="name" className="font-medium text-gray-800">Imię:</label>
                 <input
@@ -16,8 +67,6 @@ export default function ContactForm() {
                     required
                 />
             </div>
-
-            {/* Lewa kolumna: Email */}
             <div className="flex flex-col gap-1 md:gap-[0.5rem]">
                 <label htmlFor="email" className="font-medium text-gray-800">Email:</label>
                 <input
@@ -29,8 +78,6 @@ export default function ContactForm() {
                     required
                 />
             </div>
-
-            {/* Lewa kolumna: Telefon */}
             <div className="flex flex-col gap-1 md:gap-[0.5rem]">
                 <label htmlFor="phone" className="font-medium text-gray-800">Numer telefonu (opcjonalnie):</label>
                 <input
@@ -41,8 +88,6 @@ export default function ContactForm() {
                     className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
                 />
             </div>
-
-            {/* Prawa kolumna: Wiadomość */}
             <div className="flex flex-col gap-1 md:gap-[0.5rem] md:col-start-2 md:row-start-1 md:row-span-3">
                 <label htmlFor="message" className="font-medium text-gray-800">Treść wiadomości:</label>
                 <textarea
@@ -53,13 +98,11 @@ export default function ContactForm() {
                     required
                 />
             </div>
-
-            {/* Sekcja RODO - cała szerokość */}
             <div className="flex items-start gap-2 md:gap-[0.5rem] md:col-span-2 md:mt-[0.5rem]">
                 <input
                     type="checkbox"
-                    id="rodo"
                     name="rodo"
+                    id="rodo"
                     required
                     className="mt-1 min-w-[1rem] min-h-[1rem] accent-green-800 cursor-pointer"
                 />
@@ -76,14 +119,31 @@ export default function ContactForm() {
                 tabIndex={-1}
                 autoComplete="off"
             />
-            
-            {/* Przycisk */}
-            <button 
+
+            <motion.button 
                 type="submit" 
-                className="mt-2 md:mt-0 md:col-span-2 md:justify-self-end px-8 py-3 bg-green-800 text-white rounded hover:bg-green-700 transition-colors font-medium min-w-[200px]"
+                className={`
+                    mt-2 md:mt-0 md:col-span-2 md:justify-self-end
+                    px-8 py-3 bg-green-800 text-white rounded font-medium min-w-[200px] transition-colors btn-focus
+                    ${isSubmitting ?
+                        'opacity-70 cursor-not-allowed' : 'hover:bg-green-700'}`}
+                disabled={isSubmitting}
+                whileHover={!isSubmitting ? { y: -5 } : {}}
+                whileTap= {!isSubmitting ? { scale: 0.95 } : {}}
             >
-                Wyślij
-            </button>
+                {isSubmitting ? "Wysyłanie..." : "Wyślij"}
+            </motion.button>
+
+            {status === 'success' && (
+                <p className="md:col-span-2 text-green-700 font-medium text-center md:text-right">
+                    Wiadomość została pomyślnie wysłana. Dziękuję za kontakt!
+                </p>
+            )}
+            {status === 'error' && (
+                <p className="md:col-span-2 text-red-600 font-medium text-center md:text-right">
+                    Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.
+                </p>
+)}
         </form>
     )
 }

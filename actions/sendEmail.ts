@@ -1,15 +1,10 @@
 'use server'
 
 import { transporter } from '../lib/services/transporter';
-import { FormData } from '@/lib/types/FormData';
+import { UserData } from '@/lib/types/UserData';
 
-export async function sendEmail(formData: FormData) {
-    const { name, email, phone, message, honey } = formData;
-
-    if (honey) {
-        console.log("Bot has been catched!");
-        return { success: true }; 
-    }
+export async function sendEmail(formData: UserData) {
+    const { name, email, phone, message } = formData;
 
     const mailToTherapist = {
         from: process.env.SMTP_USER,
@@ -41,8 +36,7 @@ export async function sendEmail(formData: FormData) {
 
         return { success: true };
     } catch(error) {
+        console.error("Nodemailer sending error: ", error);
         return { success: false };
     }
-
-
 }

@@ -53,7 +53,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
         <h1>{offer.name}</h1>
       </div>
       <p className='
-        m-4 text-justify text-green-800
+        m-4 text-left text-green-800
         max-w-[75ch] md:mx-auto
         md:col-span-2 md:row-start-2 md:m-0'
       >
