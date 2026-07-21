@@ -64,6 +64,7 @@ export default function ContactForm() {
                     id="name"
                     placeholder="Wpisz swoje imię"
                     className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
+                    autoComplete="name"
                     required
                 />
             </div>
@@ -75,6 +76,7 @@ export default function ContactForm() {
                     id="email"
                     placeholder="twój@email.pl"
                     className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
+                    autoComplete="email"
                     required
                 />
             </div>
@@ -86,6 +88,7 @@ export default function ContactForm() {
                     id="phone"
                     placeholder="+48 123 456 789"
                     className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
+                    autoComplete="tel"
                 />
             </div>
             <div className="flex flex-col gap-1 md:gap-[0.5rem] md:col-start-2 md:row-start-1 md:row-span-3">
@@ -118,6 +121,7 @@ export default function ContactForm() {
                 className="hidden"
                 tabIndex={-1}
                 autoComplete="off"
+                aria-hidden="true"
             />
 
             <motion.button 
@@ -135,12 +139,22 @@ export default function ContactForm() {
             </motion.button>
 
             {status === 'success' && (
-                <p className="md:col-span-2 text-green-700 font-medium text-center md:text-right">
+                <p 
+                    role="status"
+                    className="
+                    md:col-span-2 text-green-700 font-medium
+                    text-center md:text-right"
+                    aria-live="polite"
+                >
                     Wiadomość została pomyślnie wysłana. Dziękuję za kontakt!
                 </p>
             )}
             {status === 'error' && (
-                <p className="md:col-span-2 text-red-600 font-medium text-center md:text-right">
+                <p
+                    role='alert'
+                    className="
+                        md:col-span-2 text-red-600 font-medium text-center md:text-right"
+                >
                     Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.
                 </p>
 )}
