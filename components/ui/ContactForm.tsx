@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { UserData } from '../../lib/types/UserData';
 import { sendEmail } from '@/actions/sendEmail';
+import { useToastStore } from '@/lib/store/useToastStore';
 
 export default function ContactForm() {
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [status, setStatus]
-        = useState<'idle' | 'success' | 'error'>('idle');
+    const showToast = useToastStore((state) => state.showToast);
 
     const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -20,7 +20,10 @@ export default function ContactForm() {
         const formData = new FormData(e.currentTarget);
 
         if (formData.get('honey')) {
-            setStatus('success');
+            showToast(
+                'success',
+                'Wiadomość została pomyślnie wysłana. Dziękuję za kontakt!'
+            )
             setIsSubmitting(false);
             return;
         }
@@ -39,10 +42,16 @@ export default function ContactForm() {
             if (!result.success) {
                 throw new Error("Server sending error");
             }
-            setStatus('success');
+            showToast(
+                'success',
+                'Wiadomość została pomyślnie wysłana. Dziękuję za kontakt!'
+            )
             form.reset();
         } catch {
-            setStatus('error');
+            showToast(
+                'error',
+                'Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.'
+            )
         } finally {
             setIsSubmitting(false);
         }
@@ -137,27 +146,6 @@ export default function ContactForm() {
             >
                 {isSubmitting ? "Wysyłanie..." : "Wyślij"}
             </motion.button>
-
-            {status === 'success' && (
-                <p 
-                    role="status"
-                    className="
-                    md:col-span-2 text-green-700 font-medium
-                    text-center md:text-right"
-                    aria-live="polite"
-                >
-                    Wiadomość została pomyślnie wysłana. Dziękuję za kontakt!
-                </p>
-            )}
-            {status === 'error' && (
-                <p
-                    role='alert'
-                    className="
-                        md:col-span-2 text-red-600 font-medium text-center md:text-right"
-                >
-                    Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.
-                </p>
-)}
         </form>
     )
 }

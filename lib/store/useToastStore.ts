@@ -31,5 +31,5 @@ export const useToastStore = create<ToastState>((set, get) => ({
             get().hideToast();
         }, 3000);
     },
-    hideToast: () => set({ isVisible: false }),
+    hideToast: () => set({isVisible: false,}),
 }))
