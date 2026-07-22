@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import ContactForm from "@/components/ui/ContactForm";
+import ContactForm from "@/components/layout/ContactForm";
 
 export const metadata: Metadata = {
   title: "Kontakt",

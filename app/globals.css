@@ -13,7 +13,7 @@
   /* Twoje kolory gabinetu */
   --color-warm-brown: hsl(var(--warm-brown));
   --color-light-green: hsl(var(--light-green));
-  --color-soft-beige: hsl(var(--soft-beige));
+  --color-warm-sand: hsl(var(--warm-sand));
   --color-cream: hsl(var(--cream));
   --color-warm-accent: hsl(var(--warm-accent));
   --color-pearl: hsl(var(--pearl));
@@ -31,12 +31,11 @@
     /* New theme testing */
     --main: 145 45% 28%;
     --button-gold: 43 60% 49%;
+    --warm-sand: 38 35% 72%;
 
     /* Custom therapy website colors */
     --warm-brown: 146 50% 36%;
     --light-green: 144 39% 50%;
-    --soft-beige: 45 18% 85%;
-    --cream: 45 20% 96%;
     --warm-accent: 146 40% 60%;
     --pearl: 40 25% 98%;
     --gold-dark: 43 60% 55%;
