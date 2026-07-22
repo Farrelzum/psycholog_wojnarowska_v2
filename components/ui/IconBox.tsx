@@ -13,7 +13,7 @@ export default function IconBox({ Icon, name }: Props) {
         <div 
             className="
                 flex flex-col items-center gap-2
-                text-center max-w-[120px]"
+                text-center max-w-[120px] lg:max-w-full"
         >
             <motion.div 
                 className='
@@ -36,7 +36,8 @@ export default function IconBox({ Icon, name }: Props) {
             </motion.div>
             <span
                 className='
-                text-sm font-semibold text-green-800 leading-tight'
+                text-sm font-semibold text-green-800 leading-tight
+                lg:text-base'
             >{name}</span>
         </div>
     );

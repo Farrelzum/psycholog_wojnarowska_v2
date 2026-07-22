@@ -7,12 +7,10 @@ interface Props {
 export default function TherapistCard({ className = '' }: Props) {
     return (
         <div className={`
-                absolute left-1/2 bottom-4
-                -translate-x-1/2
                 flex flex-col items-center
-                rounded border bg-warm-sand
-                mx-auto p-2 w-96
-            ${className}`}
+                rounded border bg-warm-sand 
+                p-2 w-11/12 max-w-sm md:w-96
+                ${className}`}
         >
             <h2 className='font-bold'>Barbara Wojnarowska</h2>
             <span className='font-semibold'>Psycholog | Terapeuta Integracji Sensorycznej</span>

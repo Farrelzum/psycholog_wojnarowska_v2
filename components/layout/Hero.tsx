@@ -11,7 +11,9 @@ import TherapistCard from './TherapistCard';
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-page shadow-lg overflow-hidden">
+        <section className="
+            relative w-full min-h-page shadow-lg overflow-hidden
+            lg:grid lg:grid-cols-2">
             <Image 
                 src={hero_bg} 
                 alt="" 
@@ -22,19 +24,21 @@ export default function Hero() {
             <div className="container mx-auto relative z-10 grid grid-cols-1 md:gap-[2rem] md:grid-cols-2 min-h-page items-start">
                 
                 <div className='md:col-span-2'>
-                    <div className="flex flex-col w-fit">
+                    <div className="flex flex-col w-fit md:w-full">
                         <h1 className="m-10 mb-6">
                             Każda zmiana <br/> zaczyna się od <br/>
                             <span className="font-bold">pierwszej rozmowy</span>
                         </h1>
                         <Divider className='w-3/4 px-10'/>
-                        <p className='mx-10 my-6 text-main font-semibold'>
+                        <p className='mx-10 my-6 text-main font-semibold lg:text-lg'>
                             Wspieram dzieci, młodzież i dorosłych <br/>
                             w trudnościach emocjonalnych, kryzysach życiowych 
                             oraz trudnościach rozwojowych.
                         </p>
                         <ul className="
-                                flex flex-col sm:flex-row items-center justify-between gap-8 my-8"
+                                flex flex-col sm:flex-row
+                                items-center justify-between gap-8 my-8
+                                md:mx-8"
                         >
                             <li>
                                 <IconBox
@@ -56,16 +60,17 @@ export default function Hero() {
                                 />
                             </li>
                         </ul>
-                        <FormButton className='m-10'/>
+                        <FormButton className='m-10 p-3'/>
                     </div>
                 </div>
             </div>
-                <div className="flex justify-end self-end w-full h-full relative">
+                <div className="flex justify-end self-end w-full md:h-40">
                     <Image
                         src={therapist_img}
                         alt="Psycholog Barbara Wojnarowska"
                         className="
                             static md:absolute md:bottom-0 md:right-0
+                            md:translate-y-4 lg:object-left-bottom
                             max-w-[66%] max-h-[70%]
                             -scale-x-100 md:w-[30%] md:max-h-full
                             lg:w-[50%]
@@ -73,7 +78,13 @@ export default function Hero() {
                         priority
                     />
                 </div>
-                <TherapistCard />
+                <TherapistCard 
+                    className='
+                        absolute left-1/2 bottom-4
+                        -translate-x-1/2 mx-auto
+                        md:left-11 md:translate-none
+                        lg:left-auto lg:right-4'
+                    />
         </section>
     );
 }
