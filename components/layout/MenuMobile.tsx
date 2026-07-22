@@ -30,7 +30,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className='absolute top-full left-0 w-full h-[calc(100dvh-4rem)] bg-light-green flex flex-col justify-start items-start py-8 px-4 shadow-md -z-10 backdrop-blur-md overflow-hidden' 
+            className='absolute top-full left-0 w-full h-[calc(100dvh-4rem)] bg-main flex flex-col justify-start items-start py-8 px-4 shadow-md -z-10 backdrop-blur-md overflow-hidden' 
             aria-label="Menu mobilne">
             <div className="flex w-full justify-between items-start flex-1">
                 <ul className='flex flex-col gap-8 relative z-10 ml-4 whitespace-nowrap'>

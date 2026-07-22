@@ -3,7 +3,7 @@
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import MenuMobile from './MenuMobile';
-import NavBar from './NavBar';
+import NavBar from './Navbar';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);

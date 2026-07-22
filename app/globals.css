@@ -6,6 +6,10 @@
   --color-foreground: hsl(var(--foreground));
   --color-border: hsl(var(--border));
 
+  /* New theme testing */
+  --color-main: hsl(var(--main));
+  --color-gold: hsl(var(--button-gold));
+
   /* Twoje kolory gabinetu */
   --color-warm-brown: hsl(var(--warm-brown));
   --color-light-green: hsl(var(--light-green));
@@ -13,7 +17,6 @@
   --color-cream: hsl(var(--cream));
   --color-warm-accent: hsl(var(--warm-accent));
   --color-pearl: hsl(var(--pearl));
-  --color-gold: hsl(var(--gold));
   --color-gold-light: hsl(var(--gold-light));
 
   --radius: 0.5rem;
@@ -25,6 +28,10 @@
     --foreground: 95 15% 25%;
     --border: 60 8% 85%;
 
+    /* New theme testing */
+    --main: 145 45% 28%;
+    --button-gold: 43 60% 49%;
+
     /* Custom therapy website colors */
     --warm-brown: 146 50% 36%;
     --light-green: 144 39% 50%;
@@ -33,7 +40,6 @@
     --warm-accent: 146 40% 60%;
     --pearl: 40 25% 98%;
     --gold-dark: 43 60% 55%;
-    --gold: 43 74% 49%;
     --gold-light: 43 80% 60%;
     --gold-highlight: 46 90% 85%;
     

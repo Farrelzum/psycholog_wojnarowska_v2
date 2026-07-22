@@ -36,9 +36,9 @@ export default function NavBar({
     return (
             <nav className='
                 relative flex justify-between items-center
-                h-16 px-8 md:px-10 lg:px-16 py-2 bg-emerald-600 shadow-sm'
+                h-16 px-8 md:px-10 lg:px-16 py-2 bg-main shadow-sm'
             >
-                <Logo textClassName='text-sm md:text-base' onClick={() => setIsOpen(false)}/>
+                <Logo textClassName='text-sm md:text-base text-white' onClick={() => setIsOpen(false)}/>
                 <ul className='
                     hidden w-auto h-auto gap-6 lg:gap-10
                     lg:flex items-center justify-between'
@@ -79,7 +79,7 @@ export default function NavBar({
                                     <ul className='
                                         flex flex-col gap-4 p-4
                                         w-max whitespace-nowrap
-                                        bg-light-green/90 shadow-md rounded-b-md'
+                                        bg-main/90 shadow-md rounded-b-md'
                                     >
                                         {offers.map((item, idx) => (
                                             <li key={idx}>
