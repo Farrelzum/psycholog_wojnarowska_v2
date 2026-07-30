@@ -8,7 +8,7 @@ export default function FormButton({ className = '', ...props }: HTMLMotionProps
         <motion.button
             className={`
                 flex items-center justify-center gap-2
-                bg-[hsl(43_60%_49%)] rounded-md border text-pearl p-2 font-serif btn-focus max-w-96 md:max-w-60 lg:text-lg
+                bg-gold rounded-md border text-pearl p-2 font-serif btn-focus max-w-96 md:max-w-60 lg:text-lg
                 ${className}`}
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.95 }}

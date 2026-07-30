@@ -8,7 +8,7 @@ export default function TherapistCard({ className = '' }: Props) {
     return (
         <div className={`
                 flex flex-col items-center
-                rounded border bg-warm-sand 
+                rounded border bg-ivory
                 p-2 w-11/12 max-w-sm md:w-96
                 ${className}`}
         >

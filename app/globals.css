@@ -9,6 +9,7 @@
   /* New theme testing */
   --color-main: hsl(var(--main));
   --color-gold: hsl(var(--button-gold));
+  --color-ivory: hsl(var(--ivory));
 
   /* Twoje kolory gabinetu */
   --color-warm-brown: hsl(var(--warm-brown));
@@ -31,6 +32,7 @@
     /* New theme testing */
     --main: 145 45% 28%;
     --button-gold: 43 60% 49%;
+    --ivory: 43, 50%, 95%;
     --warm-sand: 38 35% 72%;
 
     /* Custom therapy website colors */
