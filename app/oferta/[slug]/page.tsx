@@ -1,4 +1,4 @@
-import FormButton from '@/components/ui/FormButton';
+import LinkButton from '@/components/ui/LinkButton';
 import Image from 'next/image';
 import offer_bg from '../../../public/offer_bg.png';
 import { offers } from '@/lib/constants/offers';
@@ -86,7 +86,7 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
           >
             Koszt: {offer.price}
           </p>
-          <FormButton className='m-4 md:m-auto lg:text-lg lg:p-3'/>
+          <LinkButton className='m-4 md:m-auto lg:text-lg lg:p-3'/>
         </div>
       </div>
     </article>

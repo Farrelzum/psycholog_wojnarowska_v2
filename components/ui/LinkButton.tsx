@@ -1,21 +1,27 @@
 "use client"
 
-import { motion, HTMLMotionProps } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { PenTool } from 'lucide-react';
+import Link  from 'next/link';
 
-export default function FormButton({ className = '', ...props }: HTMLMotionProps<"button">) {
+const MotionLink = motion.create(Link);
+
+interface Props {
+    className?: string
+}
+
+export default function FormButton({ className = ''}: Props) {
     return (
-        <motion.button
+        <MotionLink
             className={`
                 flex items-center justify-center gap-2
                 bg-gold rounded-md border text-pearl p-2 font-serif btn-focus max-w-96 md:max-w-60 lg:text-lg
                 ${className}`}
             whileHover={{ y: -5 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => alert("Tymczasowy znacznik: Otwieram formularz!")}
-            {...props}
+            href="/kontakt"
         >
             <PenTool size={18} /> Umów się na spotkanie
-        </motion.button>
+        </MotionLink>
     );
 }

@@ -3,7 +3,7 @@
 import hero_bg from '../../public/hero_bg_2.png'
 import therapist_img from '../../public/therapist-portrait.png'
 import Image from 'next/image';
-import FormButton from '../ui/FormButton';
+import LinkButton from '../ui/LinkButton';
 import Divider from '../ui/Divider';
 import IconBox from '../ui/IconBox';
 import { Brain, Users, HandHeart } from 'lucide-react';
@@ -60,7 +60,7 @@ export default function Hero() {
                                 />
                             </li>
                         </ul>
-                        <FormButton className='m-10 p-3'/>
+                        <LinkButton className='m-10 p-3'/>
                     </div>
                 </div>
             </div>
