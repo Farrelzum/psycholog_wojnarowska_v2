@@ -1,6 +1,6 @@
 import LinkButton from '@/components/ui/LinkButton';
 import Image from 'next/image';
-import offer_bg from '../../../public/offer_bg.png';
+import offer_bg from '@/images/offers/offer_bg.png';
 import { offers } from '@/lib/constants/offers';
 import { notFound } from 'next/navigation';
 import { Metadata } from 'next';
@@ -22,7 +22,12 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: offer.name,
       description: offer.description.substring(0, 160) + '...',
-      images: [offer.image],
+      images: {
+        url: offer.image.src,
+        width: offer.image.width,
+        height: offer.image.height,
+        alt: `Ikona ${offer.name}`,
+      },
     },
   };
 }

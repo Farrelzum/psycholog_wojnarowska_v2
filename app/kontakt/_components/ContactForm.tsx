@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { UserData } from '../../lib/types/UserData';
+import { UserData } from '../../../lib/types/UserData';
 import { sendEmail } from '@/actions/sendEmail';
 import { useToastStore } from '@/lib/store/useToastStore';
 

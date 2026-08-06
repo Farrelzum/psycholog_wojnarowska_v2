@@ -1,4 +1,5 @@
 import { LucideIcon } from "lucide-react";
+import { StaticImageData } from "next/image";
 
 export interface Offer {
         name: string;
@@ -6,6 +7,6 @@ export interface Offer {
         price: string;
         path: string;
         Icon: LucideIcon;
-        image: string;
+        image: StaticImageData;
         slug: string;
 }

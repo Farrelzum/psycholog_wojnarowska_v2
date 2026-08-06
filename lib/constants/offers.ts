@@ -1,5 +1,13 @@
 import { Brain, ClipboardList, Puzzle, Handshake, Baby, Heart, Scale } from 'lucide-react';
 import { Offer } from '../types/Offer';
+import adhd_diagnosis from '@/images/offers/adhd_diagnosis.png';
+import intelligence_test from '@/images/offers/intelligence_test.png';
+import sensory_integration from '@/images/offers/sensory_integration_ev.png';
+import social_skill_training from '@/images/offers/social_skill_training.png';
+import therapy from '@/images/offers/therapy.png';
+import couple_therapy from '@/images/offers/couple_therapy.png';
+import family_medation from '@/images/offers/family_medation.png';
+
 
 
 
@@ -7,12 +15,12 @@ import { Offer } from '../types/Offer';
 export const offers: Offer[] = [
         {
                 name: "Diagnoza ADHD",
-                path: "/oferta/diagnoza-adhd",
+                path: "/diagnoza-adhd",
                 description: 
                         "Wiem, jak wyczerpujące bywa codzienne zmaganie się z natłokiem myśli i poczuciem, że Twój umysł nigdy nie odpoczywa.\n\nW mojej pracy do diagnozy ADHD podchodzę przede wszystkim z empatią, rzetelnością i uważnością na Twoje granice. Zależy mi na tym, abyś podczas naszych spotkań czuł się bezpiecznie i komfortowo - to przestrzeń, w której wspólnie, w spokojnym tempie, przyjrzymy się Twoim doświadczeniom. Nie oceniam, lecz pomagam zrozumieć, w jaki sposób funkcjonuje Twój układ nerwowy.\n\nCelem diagnozy nie jest przyklejenie etykiety, ale znalezienie odpowiedzi, które pozwolą Ci odzyskać równowagę i lepiej zadbać o siebie w codziennym życiu.",
                 price: "200",
                 Icon: Brain,
-                image: "/adhd_diagnosis.png",
+                image: adhd_diagnosis,
                 slug: "diagnoza-adhd"
 
         },
@@ -23,7 +31,7 @@ export const offers: Offer[] = [
                         "Wiem, jak wiele pytań i rodzicielskiego niepokoju może budzić decyzja o wykonaniu testu inteligencji u dziecka. W mojej pracy do badania najmłodszych podchodzę przede wszystkim z empatią, ciepłem i dużą uważnością na ich granice. Zależy mi na tym, aby Twoje dziecko podczas naszych spotkań czuło się bezpiecznie i swobodnie – dbam o to, by badanie odbywało się w przyjaznej atmosferze i nie przypominało stresującego sprawdzianu. To przestrzeń, w której w spokojnym, dopasowanym do dziecka tempie przyjrzymy się temu, jak poznaje ono świat. Nie oceniam, lecz pomagam zrozumieć unikalny sposób funkcjonowania jego umysłu. Celem diagnozy nie jest zredukowanie potencjału do jednej liczby, ale odkrycie mocnych stron i zasobów, które pozwolą Wam jako rodzicom jeszcze lepiej wspierać jego harmonijny rozwój na co dzień.",
                 price: "300",
                 Icon: ClipboardList,
-                image: "/intelligence_test.png",
+                image: intelligence_test,
                 slug: "diagnoza-inteligencji"
         },
         {
@@ -33,7 +41,7 @@ export const offers: Offer[] = [
                 price: "250",
                 path: "/oferta/diagnoza-integracji-sensorycznej",
                 Icon: Puzzle,
-                image: "/sensory_integration_ev.png",
+                image: sensory_integration,
                 slug: "diagnoza-integracji-sensorycznej"
         },
         {
@@ -43,7 +51,7 @@ export const offers: Offer[] = [
                 price: "200",
                 path: "/oferta/trening-umiejetnosci-spolecznych",
                 Icon: Handshake,
-                image: "/social_skill_training.png",
+                image: social_skill_training,
                 slug: "trening-umiejetnosci-spolecznych"
          },
         {
@@ -53,7 +61,7 @@ export const offers: Offer[] = [
                 price: "200",
                 path: "/oferta/pomoc",
                 Icon: Baby,
-                image: "/therapy.png",
+                image: therapy,
                 slug: "pomoc"
         },
         {
@@ -63,7 +71,7 @@ export const offers: Offer[] = [
                 price: "300",
                 path: "/oferta/terapia-par",
                 Icon: Heart,
-                image: "/couple_therapy.png",
+                image: couple_therapy,
                 slug: "terapia-par"
         },
         {
@@ -73,7 +81,7 @@ export const offers: Offer[] = [
                 price: "300",
                 path: "/oferta/mediacje-rodzinne",
                 Icon: Scale,
-                image: "/family_medation.png",
+                image: family_medation,
                 slug: "mediacje-rodzinne"
         },
 ];
