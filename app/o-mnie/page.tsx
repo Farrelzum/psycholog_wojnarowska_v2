@@ -8,6 +8,20 @@ import graduationCap from '@/images/aboutMe/graduation_cap.svg';
 import diploma from '@/images/aboutMe/diploma.svg';
 import suitcase from '@/images/aboutMe/suitcase.svg';
 import bg from '@/images/aboutMe/aboutMe_bg-1.jpg';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'O mnie | Psycholog Barbara Wojnarowska',
+  description: 'Psycholog, diagnosta i terapeuta. Poznaj moje kwalifikacje, doświadczenie zawodowe oraz obszary wsparcia dla dzieci, młodzieży i dorosłych.',
+  openGraph: {
+    title: 'O mnie | Psycholog Barbara Wojnarowska',
+    description: 'Psycholog, diagnosta i terapeuta. Poznaj moje kwalifikacje, doświadczenie zawodowe oraz obszary wsparcia.',
+    url: 'https://psycholog-wojnarowska.pl/o-mnie', 
+    siteName: 'Psycholog Barbara Wojnarowska',
+    locale: 'pl_PL',
+    type: 'website',
+  },
+};
 
 export default function AboutPage() {
   return (
@@ -56,7 +70,7 @@ export default function AboutPage() {
             
             <IvoryTile className='w-full px-6 md:px-10 py-8 md:py-10 flex flex-col shadow-lg'>
               <div className="flex flex-row items-center gap-4 w-full mb-6">
-                <Image alt="" src={graduationCap} className='w-20 md:w-28 scale-110 h-auto text-main' aria-hidden loading="eager" />
+                <Image alt="" src={graduationCap} className='w-20 md:w-28 scale-110 h-auto text-main' aria-hidden />
                 <h3 className='text-xl md:text-2xl font-bold text-main'>Kwalifikacje</h3>
               </div>
               <ul className='text-main font-semibold list-disc list-inside w-full mb-10 ml-2 md:ml-6 space-y-2'>
@@ -65,7 +79,7 @@ export default function AboutPage() {
               </ul>
 
               <div className="flex flex-row items-center gap-4 w-full mb-6">
-                <Image alt="" src={diploma} className='w-20 md:w-28 scale-110 h-auto text-main' aria-hidden loading="eager" />
+                <Image alt="" src={diploma} className='w-20 md:w-28 scale-110 h-auto text-main' aria-hidden />
                 <h3 className='text-xl md:text-2xl font-bold text-main'>Studia podyplomowe</h3>
               </div>
               <ul className='text-main font-semibold list-disc list-inside w-full mb-10 ml-2 md:ml-6 space-y-2'>
@@ -75,7 +89,7 @@ export default function AboutPage() {
               </ul>
 
               <div className="flex flex-row items-center gap-4 w-full mb-6">
-                <Image alt="" src={suitcase} className='w-20 md:w-28 scale-110 md:scale-100 h-auto text-main' aria-hidden loading="eager" />
+                <Image alt="" src={suitcase} className='w-20 md:w-28 scale-110 md:scale-100 h-auto text-main' aria-hidden />
                 <h3 className='text-xl md:text-2xl font-bold text-main'>
                   Kwalifikacje zawodowe
                 </h3>
@@ -134,7 +148,6 @@ export default function AboutPage() {
                       object-cover object-center text-main
                       ${index === 0 ? 'scale-140' : ''}`}
                     aria-hidden
-                    loading="eager"
                   />
                 }
                 splitList={index === 0 ? true : false}
@@ -142,7 +155,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
       </main>
     </section>
   );
