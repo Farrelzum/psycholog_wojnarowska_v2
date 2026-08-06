@@ -80,7 +80,7 @@
   }
 
   h1 {
-    @apply text-[5dvh] md:text-[8dvh] text-green-800 font-serif leading-tight;
+    @apply text-[5dvh] md:text-[8dvh] text-main font-serif leading-tight;
   }
 }
 
