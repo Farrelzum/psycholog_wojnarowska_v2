@@ -16,7 +16,9 @@
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className={`
                     flex flex-col items-center justify-center
-                    h-full lg:w-full lg:justify-start
+                    h-full w-full max-w-[400px]
+                    md:max-w-none
+                    lg:w-full lg:justify-start
                     m-2 lg:m-auto p-6 bg-ivory rounded-md shadow-md
                     md:w-[600px]
                     hover:shadow-xl transition-shadow duration-300

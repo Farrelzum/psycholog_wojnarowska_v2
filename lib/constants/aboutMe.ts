@@ -1,6 +1,7 @@
 import kids_and_teens from '@/images/aboutMe/kids_and_teens.svg';
 import adults from '@/images/aboutMe/adults.svg';
 import family from '@/images/aboutMe/family.svg';
+import { Specs } from '../types/Specs';
 
 export const description = [
     'Jestem psychologiem dzieci, młodzieży i osób dorosłych. W swojej pracy wspieram osoby doświadczające trudności emocjonalnych, kryzysów życiowych oraz wyzwań rozwojowych, łącząc rzetelną diagnozę psychologiczną z indywidualnym podejściem do każdego pacjenta.',
@@ -10,7 +11,7 @@ export const description = [
     'W pracy wykorzystuję przede wszystkim założenia Terapii Skoncentrowanej na Rozwiązaniach (TSR), a także elementy terapii akceptacji i zaangażowania (ACT). Szczególną wagę przywiązuję do budowania relacji opartej na zaufaniu, poczuciu bezpieczeństwa i wzajemnym szacunku. Regularnie uczestniczę w szkoleniach i doskonalę swoje kompetencje, aby oferować pomoc zgodną z aktualną wiedzą naukową i standardami pracy psychologa.',
 ]
 
-export const specialization = [
+export const specialization: Specs[] = [
     {
         title: 'Dzieci i młodzież',
         image: kids_and_teens,
