@@ -7,6 +7,13 @@ import social_skill_training from '@/images/offers/social_skill_training.png';
 import therapy from '@/images/offers/therapy.png';
 import couple_therapy from '@/images/offers/couple_therapy.png';
 import family_medation from '@/images/offers/family_medation.png';
+import adhdMain from '@/images/offers/adhdMainOffer.jpg';
+import intelligenceMain from '@/images/offers/intelligenceMainOffer.jpg';
+import sensoryMain from '@/images/offers/sensoryMainOffer.jpg';
+import socialMain from '@/images/offers/socialMainOffer.jpg';
+import therapyMain from '@/images/offers/therapyMainOffer.jpg';
+import coupleMain from '@/images/offers/coupleMainOffer.jpg';
+import familyMain from '@/images/offers/familyMainOffer.jpg';
 
 
 
@@ -21,6 +28,7 @@ export const offers: Offer[] = [
                 price: "200",
                 Icon: Brain,
                 image: adhd_diagnosis,
+                mainPageImage: adhdMain,
                 slug: "diagnoza-adhd"
 
         },
@@ -32,6 +40,7 @@ export const offers: Offer[] = [
                 price: "300",
                 Icon: ClipboardList,
                 image: intelligence_test,
+                mainPageImage: intelligenceMain,
                 slug: "diagnoza-inteligencji"
         },
         {
@@ -42,6 +51,7 @@ export const offers: Offer[] = [
                 path: "/oferta/diagnoza-integracji-sensorycznej",
                 Icon: Puzzle,
                 image: sensory_integration,
+                mainPageImage: sensoryMain,
                 slug: "diagnoza-integracji-sensorycznej"
         },
         {
@@ -52,6 +62,7 @@ export const offers: Offer[] = [
                 path: "/oferta/trening-umiejetnosci-spolecznych",
                 Icon: Handshake,
                 image: social_skill_training,
+                mainPageImage: socialMain,
                 slug: "trening-umiejetnosci-spolecznych"
          },
         {
@@ -62,6 +73,7 @@ export const offers: Offer[] = [
                 path: "/oferta/pomoc",
                 Icon: Baby,
                 image: therapy,
+                mainPageImage: therapyMain,
                 slug: "pomoc"
         },
         {
@@ -72,6 +84,7 @@ export const offers: Offer[] = [
                 path: "/oferta/terapia-par",
                 Icon: Heart,
                 image: couple_therapy,
+                mainPageImage: coupleMain,
                 slug: "terapia-par"
         },
         {
@@ -82,6 +95,7 @@ export const offers: Offer[] = [
                 path: "/oferta/mediacje-rodzinne",
                 Icon: Scale,
                 image: family_medation,
+                mainPageImage: familyMain,
                 slug: "mediacje-rodzinne"
         },
 ];

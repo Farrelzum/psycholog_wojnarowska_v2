@@ -8,5 +8,6 @@ export interface Offer {
         path: string;
         Icon: LucideIcon;
         image: StaticImageData;
+        mainPageImage: StaticImageData;
         slug: string;
 }

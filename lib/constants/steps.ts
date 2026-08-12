@@ -1,8 +1,8 @@
 import { Steps } from "../types/Steps";
-import contact from '@/images/mainPage/contact.png';
-import diagnosis from '@/images/mainPage/diagnosis.png';
-import plan from '@/images/mainPage/plan.png';
-import session from '@/images/mainPage/session.png';
+import contact from '@/images/mainPage/contact.webp';
+import diagnosis from '@/images/mainPage/diagnosis.webp';
+import plan from '@/images/mainPage/plan.webp';
+import session from '@/images/mainPage/session.webp';
 
 
 export const steps: Steps[] = [
