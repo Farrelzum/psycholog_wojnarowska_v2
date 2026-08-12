@@ -69,6 +69,7 @@ export default function OffersSection() {
                                 />
                                 <h3 className="
                                     p-4 text-center w-full
+                                    text-md md:text-lg lg:text-xl
                                     flex items-center justify-center
                                     min-h-[5rem] md:min-h-[6rem] lg:min-h-[7rem]"
                                 >
