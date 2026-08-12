@@ -63,19 +63,19 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                     </li>
                     <li>
                         <Link
-                            href="/dla-rodzicow"
-                            className="
-                                text-xl text-white font-medium
-                                rounded btn-focus"
-                            onClick={onClose}>Dla rodziców</Link>
-                    </li>
-                    <li>
-                        <Link
                             href="/cennik"
                             className="
                                 text-xl text-white font-medium
                                 rounded btn-focus"
                             onClick={onClose}>Cennik</Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="/faq"
+                            className="
+                                text-xl text-white font-medium
+                                rounded btn-focus"
+                            onClick={onClose}>Dla rodziców</Link>
                     </li>
                     <li>
                         <Link

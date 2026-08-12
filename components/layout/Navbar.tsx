@@ -100,15 +100,6 @@ export default function NavBar({
                         </AnimatePresence>
                     </li>
                     <li>
-                        <Link href="/dla-rodzicow"
-                            onClick={() => setIsOfertaOpen(false)}
-                            className="
-                                text-white hover:text-gold
-                                transition-colors duration-500 ease-in-out
-                                lg:font-medium lg:text-lg rounded btn-focus"
-                            >Dla rodziców</Link>
-                    </li>
-                    <li>
                         <Link href="/cennik"
                             onClick={() => setIsOfertaOpen(false)}
                             className="
@@ -116,6 +107,15 @@ export default function NavBar({
                                 transition-colors duration-500 ease-in-out
                                 lg:font-medium lg:text-lg rounded btn-focus"
                             >Cennik</Link>
+                    </li>
+                    <li>
+                        <Link href="/faq"
+                            onClick={() => setIsOfertaOpen(false)}
+                            className="
+                                text-white hover:text-gold
+                                transition-colors duration-500 ease-in-out
+                                lg:font-medium lg:text-lg rounded btn-focus"
+                            >FAQ</Link>
                     </li>
                     <li>
                         <Link href='/kontakt'
