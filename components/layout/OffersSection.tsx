@@ -48,22 +48,24 @@ export default function OffersSection() {
                                 }
                             }}
                             className="
-                                w-full bg-ivory rounded-lg overflow-hidden shadow-md
-                                md:w-[calc(50%-3rem)] 
-                                lg:w-[calc(33%-3rem)]"
+                                w-full bg-ivory rounded-lg shadow-md
+                                md:w-[calc(50%-3rem)] lg:w-[calc(33%-3rem)]
+                                "
                         >
                             <Link 
                                 href={offer.path}
                                 className="
-                                    flex flex-col justify-center items-center h-full"
+                                    flex flex-col justify-center items-center h-full
+                                    rounded-lg btn-focus"
                             >
                                 <Image 
                                     src={offer.mainPageImage}
-                                    alt={offer.name}
+                                    alt=''
                                     className="
                                         object-center
                                         w-full h-auto rounded-t-lg"
                                     priority={index === 0} 
+                                    aria-hidden="true"
                                 />
                                 <h3 className="
                                     p-4 text-center w-full
