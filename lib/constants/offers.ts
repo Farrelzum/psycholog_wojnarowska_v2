@@ -25,7 +25,7 @@ export const offers: Offer[] = [
                 path: "/oferta/diagnoza-adhd",
                 description: 
                         "Wiem, jak wyczerpujące bywa codzienne zmaganie się z natłokiem myśli i poczuciem, że Twój umysł nigdy nie odpoczywa.\n\nW mojej pracy do diagnozy ADHD podchodzę przede wszystkim z empatią, rzetelnością i uważnością na Twoje granice. Zależy mi na tym, abyś podczas naszych spotkań czuł się bezpiecznie i komfortowo - to przestrzeń, w której wspólnie, w spokojnym tempie, przyjrzymy się Twoim doświadczeniom. Nie oceniam, lecz pomagam zrozumieć, w jaki sposób funkcjonuje Twój układ nerwowy.\n\nCelem diagnozy nie jest przyklejenie etykiety, ale znalezienie odpowiedzi, które pozwolą Ci odzyskać równowagę i lepiej zadbać o siebie w codziennym życiu.",
-                price: "200",
+                price: "700",
                 Icon: Brain,
                 image: adhd_diagnosis,
                 mainPageImage: adhdMain,
@@ -37,7 +37,7 @@ export const offers: Offer[] = [
                 path: "/oferta/diagnoza-inteligencji",
                 description:
                         "Wiem, jak wiele pytań i rodzicielskiego niepokoju może budzić decyzja o wykonaniu testu inteligencji u dziecka\n\nW mojej pracy do badania najmłodszych podchodzę przede wszystkim z empatią, ciepłem i dużą uważnością na ich granice. Zależy mi na tym, aby Twoje dziecko podczas naszych spotkań czuło się bezpiecznie i swobodnie – dbam o to, by badanie odbywało się w przyjaznej atmosferze i nie przypominało stresującego sprawdzianu. To przestrzeń, w której w spokojnym, dopasowanym do dziecka tempie przyjrzymy się temu, jak poznaje ono świat. Nie oceniam, lecz pomagam zrozumieć unikalny sposób funkcjonowania jego umysłu. \n\nCelem diagnozy nie jest zredukowanie potencjału do jednej liczby, ale odkrycie mocnych stron i zasobów, które pozwolą Wam jako rodzicom jeszcze lepiej wspierać jego harmonijny rozwój na co dzień.",
-                price: "300",
+                price: "800",
                 Icon: ClipboardList,
                 image: intelligence_test,
                 mainPageImage: intelligenceMain,
@@ -47,7 +47,7 @@ export const offers: Offer[] = [
                 name: "Diagnoza integracji sensorycznej",
                 description: 
                         "Wiem, jak trudne bywają sytuacje, gdy Twoje dziecko czuje się przytłoczone bodźcami lub reaguje wyjątkowo silnie na otoczenie.D\n\no diagnozy integracji sensorycznej podchodzę z empatią i uważnością na granice małego pacjenta. Zależy mi, aby dziecko czuło się bezpiecznie, dlatego nasze spotkania często przypominają ukierunkowaną zabawę. Nie oceniam zachowania ani metod wychowawczych – w spokojnym tempie pomagam zrozumieć, co komunikuje układ nerwowy dziecka.\n\nCelem diagnozy jest stworzenie profilu sensorycznego, który pomoże Wam odzyskać równowagę i wspierać samoregulację dziecka na co dzień.",
-                price: "250",
+                price: "600",
                 path: "/oferta/diagnoza-integracji-sensorycznej",
                 Icon: Puzzle,
                 image: sensory_integration,

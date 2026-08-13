@@ -13,7 +13,8 @@ export default function ProcessSteps() {
             <h2 className="
                 text-main font-semibold
                 text-2xl md:text-3xl mb-10 md:mb-14
-                font-serif"
+                font-serif
+                text-center"
             >
                 Jak wygląda proces współpracy?
             </h2>

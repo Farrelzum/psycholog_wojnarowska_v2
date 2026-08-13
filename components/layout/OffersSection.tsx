@@ -17,7 +17,11 @@ export default function OffersSection() {
             <h2 className="
                 text-main mb-4
                 text-2xl md:text-3xl
-                font-serif">Sprawdź, w czym mogę Ci pomóc</h2>
+                font-serif
+                text-center"
+            >
+                Sprawdź, w czym mogę Ci pomóc
+            </h2>
             <Divider className="px-4"/>
             <ul className="
                 flex flex-row flex-wrap justify-center gap-8 lg:gap-12
