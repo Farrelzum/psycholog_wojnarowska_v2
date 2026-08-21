@@ -77,7 +77,7 @@ export default function OffersSection() {
                                     flex items-center justify-center
                                     min-h-[5rem] md:min-h-[6rem] lg:min-h-[7rem]"
                                 >
-                                    {offer.name}
+                                    {offer.name.toUpperCase()}
                                 </h3>
                             </Link>
                         </motion.li>

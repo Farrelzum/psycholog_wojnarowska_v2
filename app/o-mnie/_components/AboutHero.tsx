@@ -20,6 +20,7 @@
                 {description.map((par, index) => (
                 <p className='
                     text-main whitespace-pre-line
+                    font-semibold
                     py-2 lg:text-lg' key={index}>
                     {par}
                 </p>

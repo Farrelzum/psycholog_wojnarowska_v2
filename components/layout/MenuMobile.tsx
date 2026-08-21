@@ -75,7 +75,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                             className="
                                 text-xl text-white font-medium
                                 rounded btn-focus"
-                            onClick={onClose}>Dla rodziców</Link>
+                            onClick={onClose}>FAQ</Link>
                     </li>
                     <li>
                         <Link

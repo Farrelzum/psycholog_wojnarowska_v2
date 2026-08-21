@@ -13,7 +13,7 @@ export default function AboutSpecializations() {
                 >
                     Specjalizacje i obszary wsparcia
                 </h2>
-                <p className='mb-10 text-green-800 lg:text-lg'>
+                <p className='mb-10 text-green-800 lg:text-lg font-semibold'>
                     Oferuję konsultacje psychologiczne, diagnozę psychologiczną oraz wsparcie dzieci, młodzieży i osób dorosłych. Pomagam osobom doświadczającym trudności emocjonalnych, rozwojowych oraz kryzysów życiowych.
                 </p>
                 
