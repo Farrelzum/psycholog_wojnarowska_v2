@@ -1,3 +1,4 @@
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/layout/Hero";
 import Localization from "@/components/layout/Localization";
 import OffersSection from "@/components/layout/OffersSection";
@@ -10,6 +11,7 @@ export default function Home() {
       <ProcessSteps />
       <OffersSection />
       <Localization />
+      <Footer />
     </main>
   );
 }

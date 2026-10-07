@@ -21,6 +21,17 @@ import familyMain from '@/images/offers/familyMainOffer.jpg';
 
 export const offers: Offer[] = [
         {
+                name: "Pomoc psychologiczna dzieciom i młodzieży",
+                description:
+                        "Wiem, jak trudne bywa obserwowanie dziecka, które przeżywa kryzys psychologiczny lub zmaga się z trudnymi emocjami.\n\nW pracy z dziećmi i młodzieżą podchodzę do pacjentów z empatią, tworząc dla nich w pełni bezpieczną, opartą na zaufaniu przestrzeń do rozmowy. Nie oceniam zachowania dziecka ani Ciebie jako rodzica – w spokojnym tempie pomagam Wam zrozumieć przyczyny problemów.\n\nCelem wsparcia psychologicznego jest wyposażenie młodego człowieka w narzędzia do radzenia sobie z trudnościami, by pomóc Wam odzyskać równowagę i spokój na co dzień.",
+                price: "200",
+                path: "/oferta/pomoc",
+                Icon: Baby,
+                image: therapy,
+                mainPageImage: therapyMain,
+                slug: "pomoc"
+        },
+        {
                 name: "Diagnoza ADHD",
                 path: "/oferta/diagnoza-adhd",
                 description: 
@@ -66,17 +77,6 @@ export const offers: Offer[] = [
                 slug: "trening-umiejetnosci-spolecznych"
          },
         {
-                name: "Pomoc psychologiczna dzieciom i młodzieży",
-                description:
-                        "Wiem, jak trudne bywa obserwowanie dziecka, które przeżywa kryzys psychologiczny lub zmaga się z trudnymi emocjami.\n\nW pracy z dziećmi i młodzieżą podchodzę do pacjentów z empatią, tworząc dla nich w pełni bezpieczną, opartą na zaufaniu przestrzeń do rozmowy. Nie oceniam zachowania dziecka ani Ciebie jako rodzica – w spokojnym tempie pomagam Wam zrozumieć przyczyny problemów.\n\nCelem wsparcia psychologicznego jest wyposażenie młodego człowieka w narzędzia do radzenia sobie z trudnościami, by pomóc Wam odzyskać równowagę i spokój na co dzień.",
-                price: "200",
-                path: "/oferta/pomoc",
-                Icon: Baby,
-                image: therapy,
-                mainPageImage: therapyMain,
-                slug: "pomoc"
-        },
-        {
                 name: "Terapia par",
                 description:
                         "Wiem, jak bolesne bywa poczucie oddalenia i narastające niezrozumienie w związku. W terapii par zapewniam bezpieczną, pełną empatii i neutralną przestrzeń, w której każda ze stron jest na równi wysłuchana.\n\nNie oceniam i nie szukam winnego – w spokojnym tempie pomagam zrozumieć mechanizmy napędzające Wasze konflikty. \n\nCelem naszych spotkań nie jest orzekanie o racji, lecz odbudowanie zdrowej komunikacji i wsparcie Was w drodze do ponownego odzyskania bliskości na co dzień.",
@@ -87,15 +87,15 @@ export const offers: Offer[] = [
                 mainPageImage: coupleMain,
                 slug: "terapia-par"
         },
-        {
-                name: "Mediacje rodzinne",
-                description: 
-                        "Wiem, jak trudne i pełne napięcia bywają konflikty rodzinne, w których brakuje już przestrzeni na kompromis.\n\nW procesie mediacji zapewniam bezpieczną, bezstronną i pełną empatii przestrzeń, w której każda ze stron jest na równi wysłuchana. Nie oceniam i nie szukam winnego – pomagam Wam na nowo się usłyszeć.\n\nCelem naszych spotkań nie jest narzucanie rozwiązań, lecz wsparcie Was w konstruktywnej rozmowie, abyście mogli samodzielnie wypracować satysfakcjonujące porozumienie i przywrócić w rodzinie spokój.",
-                price: "300",
-                path: "/oferta/mediacje-rodzinne",
-                Icon: Scale,
-                image: family_medation,
-                mainPageImage: familyMain,
-                slug: "mediacje-rodzinne"
-        },
+        // {
+        //         name: "Mediacje rodzinne",
+        //         description: 
+        //                 "Wiem, jak trudne i pełne napięcia bywają konflikty rodzinne, w których brakuje już przestrzeni na kompromis.\n\nW procesie mediacji zapewniam bezpieczną, bezstronną i pełną empatii przestrzeń, w której każda ze stron jest na równi wysłuchana. Nie oceniam i nie szukam winnego – pomagam Wam na nowo się usłyszeć.\n\nCelem naszych spotkań nie jest narzucanie rozwiązań, lecz wsparcie Was w konstruktywnej rozmowie, abyście mogli samodzielnie wypracować satysfakcjonujące porozumienie i przywrócić w rodzinie spokój.",
+        //         price: "300",
+        //         path: "/oferta/mediacje-rodzinne",
+        //         Icon: Scale,
+        //         image: family_medation,
+        //         mainPageImage: familyMain,
+        //         slug: "mediacje-rodzinne"
+        // },
 ];

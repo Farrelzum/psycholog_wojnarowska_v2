@@ -31,7 +31,7 @@
                 <div className='lg:col-start-1 lg:mx-auto lg:self-start'>
                     {icon}
                     <h3 className={`
-                        mt-3 mb-4
+                        mt-3 mb-4 px-2
                         text-main text-xl font-bold text-center
                         ${splitList ? 'border border-main rounded-md shadow-md lg:border-none lg:shadow-none' : 'border border-main rounded-md shadow-md'}
                     `}

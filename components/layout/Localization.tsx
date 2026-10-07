@@ -1,6 +1,6 @@
 export default function Localization() {
     return (
-        <section>
+        <section className="mb-10">
             <h2 className="
                 text-main mb-4
                 text-2xl md:text-3xl
