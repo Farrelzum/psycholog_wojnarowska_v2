@@ -8,7 +8,7 @@ export default function ProcessSteps() {
         <section className="
             w-full h-auto py-8
             flex flex-col justify-center items-center
-            relative bg-ivory"
+            relative bg-ivory border-6 border-main"
         >
             <h2 className="
                 text-main font-semibold
@@ -31,25 +31,29 @@ export default function ProcessSteps() {
                     return (
                         <React.Fragment key={step.title}>
                             <li className='
-                                flex flex-col items-center
+                                flex  items-center gap-10
                                 border-2 border-main rounded-lg
-                                p-4 md:p-5 w-full
-                                lg:flex-1 lg:max-w-[14rem]'
+                                p-1 lg:p-5 w-full lg:gap-0
+                                lg:flex-1 lg:flex-col lg:max-w-[14rem]'
                             >
                                 <Image
                                     src={step.image}
                                     alt={step.title}
                                     className='
-                                        w-1/2 max-w-[7.5rem] h-auto object-contain mb-4' 
+                                        w-15
+                                        max-w-[7.5rem] h-auto object-contain
+                                        lg:mb-4 lg:w-1/2' 
                                 />
-                                <h3 className='
-                                    text-main font-semibold mt-auto text-center
-                                    text-sm md:text-base'
-                                >{`- Krok ${step.step} -`}</h3>
-                                <p className='
-                                    text-main font-semibold text-center
-                                    text-sm md:text-base'
-                                >{step.title}</p>
+                                <div>
+                                    <h3 className='
+                                        text-main font-semibold mt-auto text-left lg:text-center
+                                        text-sm md:text-base'
+                                    >{`- Krok ${step.step} -`}</h3>
+                                    <p className='
+                                        text-main font-semibold text-center
+                                        text-sm md:text-base'
+                                    >{step.title}</p>
+                                </div>
                             </li>
                             
                             {isNotLast && (

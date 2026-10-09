@@ -15,7 +15,7 @@ export default function OffersSection() {
                 my-10 md:text-2xl lg:text-3xl"
         >
             <h2 className="
-                text-main mb-4
+                text-main
                 text-2xl md:text-3xl
                 font-serif
                 text-center"
