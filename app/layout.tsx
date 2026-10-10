@@ -4,6 +4,7 @@ import Header from "@/components/layout/Header";
 import Image from 'next/image';
 import bg from '../public/background.png';
 import Toast from "@/components/ui/Toast";
+import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://psycholog-wojnarowska.pl"),
@@ -75,6 +76,7 @@ export default function RootLayout({
         </div>
         <Header/>
         {children}
+        <Footer />
         <Toast/>
         </body>
     </html>
