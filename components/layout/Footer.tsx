@@ -10,7 +10,8 @@ export default function Footer() {
             flex flex-col gap-4
             bg-main py-4
             border-t border-gold shadow-md
-            md:grid md:grid-cols-2'>
+            md:grid md:grid-cols-2
+            lg:grid-cols-3'>
             <Image 
                 src={location}
                 alt=''
@@ -19,9 +20,15 @@ export default function Footer() {
                     mx-auto mt-4
                     rounded-xl object-cover
                     border-2 border-ivory
-                    md:col-start-2'
+                    md:col-start-2
+                    lg:col-start-3'
             />
-            <div className='flex flex-col gap-8 w-fit mx-auto md:row-start-1'>
+            <div className='
+                flex flex-col gap-8
+                w-fit mx-auto md:row-start-1
+                lg:flex-row lg:ml-8
+                lg:col-span-2 lg:justify-start lg:w-full
+                lg:mt-4'>
                 <div className='flex flex-col gap-4 items-start'>
                     <div className='flex gap-2 justify-center items-start  '>
                         <MapPin className='size-6 text-ivory'/>
@@ -53,12 +60,12 @@ export default function Footer() {
                             text-[clamp(1rem,3vw,1.2rem)]
                             md:text-base'
                         >
-                            TELEFON +48 790 798 993 
+                            TEL +48 790 798 993 
                         </p>
                     </div>
                 </div>
 
-                <div className='flex justify-between items-center'>
+                <div className='flex justify-between items-center lg:items-start lg:w-full'>
                     <ul className='flex flex-col gap-1'>
                         <li>
                             <Link
