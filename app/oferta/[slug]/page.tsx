@@ -86,12 +86,17 @@ export default async function OfferPage({ params }: { params: Promise<{ slug: st
           hover:border-transparent transition-colors duration-300
           md:flex-row-reverse md:items-center
           md:col-span-2 md:row-start-3 md:m-0'>
-          <p
-            className='ml-4 pr-4 text-left text-green-800 font-bold lg:text-lg'
-          >
-            Koszt: {offer.price}
-          </p>
-          <LinkButton className='m-4 md:m-auto lg:text-lg lg:p-3'/>
+          {!offer.askLabel && 
+            <p
+              className='ml-4 pr-4 text-left text-green-800 font-bold lg:text-lg'
+            >
+              Koszt: {offer.price}
+            </p>
+          }
+          <LinkButton
+            className={'m-4 md:m-auto lg:text-lg lg:p-3'}
+            askLabel={offer.askLabel}
+          />
         </div>
       </div>
     </article>

@@ -20,7 +20,7 @@ import coupleMain from '@/images/offers/coupleMainOffer.jpg';
 
 export const offers: Offer[] = [
         {
-                name: "Pomoc psychologiczna dla dzieci, młodzieży i dorosłych",
+                name: "Pomoc psychologiczna dla dzieci i dorosłych",
                 description:
                         "Obserwowanie dziecka, które przeżywa kryzys psychologiczny lub zmaga się z trudnymi emocjami jest trudne.\n\nW pracy z dziećmi i młodzieżą podchodzę do pacjentów z empatią, tworząc dla nich w pełni bezpieczną, opartą na zaufaniu przestrzeń do rozmowy. Nie oceniam zachowania dziecka ani Ciebie jako rodzica – w spokojnym tempie pomagam Wam zrozumieć przyczyny problemów.\n\nCelem wsparcia psychologicznego jest wyposażenie młodego człowieka w narzędzia do radzenia sobie z trudnościami, by pomóc Wam odzyskać równowagę i spokój na co dzień.",
                 price: "200",
@@ -65,17 +65,6 @@ export const offers: Offer[] = [
                 slug: "diagnoza-integracji-sensorycznej"
         },
         {
-                name: "Trening Umiejętności Społecznych",
-                description:
-                        "Trudności rówieśnicze, wycofanie czy radzenie sobie z emocjami w grupie mogą być dużym wyzwaniem dla dziecka.\n\nDo Treningu Umiejętności Społecznych podchodzę z empatią, dbając o pełne poczucie bezpieczeństwa i akceptacji. W przyjaznej, opartej na zabawie atmosferze pomagam dzieciom trenować rozpoznawanie emocji, stawianie granic i budowanie relacji. Nie oceniam – wspieram w rozwoju.\n\nCelem treningu jest wzmocnienie pewności siebie Twojego dziecka, by łatwiej i radośniej odnajdywało się w codziennym świecie społecznym.",
-                price: "200",
-                path: "/oferta/trening-umiejetnosci-spolecznych",
-                Icon: Handshake,
-                image: social_skill_training,
-                mainPageImage: socialMain,
-                slug: "trening-umiejetnosci-spolecznych"
-         },
-        {
                 name: "Terapia par",
                 description:
                         "Poczucie oddalenia i narastające niezrozumienie w związku bywa bolesne. W terapii par zapewniam bezpieczną, pełną empatii i neutralną przestrzeń, w której każda ze stron jest na równi wysłuchana.\n\nNie oceniam i nie szukam winnego – w spokojnym tempie pomagam zrozumieć mechanizmy napędzające Wasze konflikty. \n\nCelem naszych spotkań nie jest orzekanie o racji, lecz odbudowanie zdrowej komunikacji i wsparcie Was w drodze do ponownego odzyskania bliskości na co dzień.",
@@ -86,6 +75,18 @@ export const offers: Offer[] = [
                 mainPageImage: coupleMain,
                 slug: "terapia-par"
         },
+        {
+                name: "Trening Umiejętności Społecznych",
+                description:
+                        "Trudności rówieśnicze, wycofanie czy radzenie sobie z emocjami w grupie mogą być dużym wyzwaniem dla dziecka.\n\nDo Treningu Umiejętności Społecznych podchodzę z empatią, dbając o pełne poczucie bezpieczeństwa i akceptacji. W przyjaznej, opartej na zabawie atmosferze pomagam dzieciom trenować rozpoznawanie emocji, stawianie granic i budowanie relacji. Nie oceniam – wspieram w rozwoju.\n\nCelem treningu jest wzmocnienie pewności siebie Twojego dziecka, by łatwiej i radośniej odnajdywało się w codziennym świecie społecznym.",
+                price: "200",
+                path: "/oferta/trening-umiejetnosci-spolecznych",
+                Icon: Handshake,
+                image: social_skill_training,
+                mainPageImage: socialMain,
+                slug: "trening-umiejetnosci-spolecznych",
+                askLabel: true
+         },
         // {
         //         name: "Mediacje rodzinne",
         //         description: 

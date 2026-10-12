@@ -10,4 +10,5 @@ export interface Offer {
         image: StaticImageData;
         mainPageImage: StaticImageData;
         slug: string;
+        askLabel?: boolean;
 }
