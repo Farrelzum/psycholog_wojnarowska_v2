@@ -17,7 +17,7 @@ export const steps: Steps[] = [
         image: diagnosis,
     },
     {
-        title: 'Indiwidualny plan\u00A0terapii',
+        title: 'Indywidualny plan\u00A0terapii',
         step: 3,
         image: plan,
     },
