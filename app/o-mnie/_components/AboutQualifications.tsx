@@ -50,16 +50,25 @@ export default function AboutQualifications() {
               </div>
               <ul className='text-main font-semibold list-disc list-inside w-full ml-2 md:ml-6 space-y-2'>
                 <li>Terapeuta Integracji Sensorycznej</li>
-                <li>Terapeuta ręki</li>
                 <li className="pl-6 -indent-6">Trener Treningu Umiejętności Społecznych&nbsp;(TUS)</li>
                 <li>Mediator sądowy</li>
-                <li className="pl-6 -indent-6">Terapia Skoncentrowana na Rozwiązaniach&nbsp;(TSR)</li>
-                <li className="mt-6 list-none">
+                <li className="pt-4 pl-6 -indent-6">Terapia Skoncentrowana na Rozwiązaniach&nbsp;(TSR)</li>
+                <li className="mt-2 list-none">
                   <span className='font-bold'>Diagnoza psychologiczna z wykorzystaniem wystandaryzowanych narzędzi:</span>
                   <ul className='list-[circle] list-inside w-full mt-3 ml-4 space-y-1'>
                     <li>Stanford–Binet 5 (SB5)</li>
                     <li>Conners 3</li>
                     <li>DIVA-5</li>
+                  </ul>
+                </li>
+                <li className="pt-4 pl-6 -indent-6">Diagnoza integracji sensorycznej (SI)</li>
+                <li className="mt-2 list-none">
+                  <span className='font-bold'>Ocena procesów integracji sensorycznej z wykorzystaniem:</span>
+                  <ul className='list-[circle] list-inside w-full mt-3 ml-4 space-y-1'>
+                    <li>wywiadu z rodzicem</li>
+                    <li>kwestionariuszy sensorycznych</li>
+                    <li>obserwacji klinicznej</li>
+                    <li>Południowokalifornijskich Testów Integracji Sensorycznej.</li>
                   </ul>
                 </li>
               </ul>
