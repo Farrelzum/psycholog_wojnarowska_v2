@@ -38,7 +38,7 @@ export default function NavBar({
                 relative flex justify-between items-center
                 h-16 px-8 md:px-10 lg:px-16 py-2 bg-main shadow-sm'
             >
-                <Logo textClassName='text-sm md:text-base text-white' onClick={() => setIsOpen(false)}/>
+                <Logo textClassName='text-base md:text-xl lg:text-2xl text-white' onClick={() => setIsOpen(false)}/>
                 <ul className='
                     hidden w-auto h-auto gap-6 lg:gap-10
                     lg:flex items-center justify-between'

@@ -49,7 +49,7 @@ export default function Footer() {
                             text-[clamp(1rem,3vw,1.2rem)]
                             md:text-base'
                         >
-                            {`Godziny otwarcia:\npon-pt 13:00-19:00\nsobota - po wcześniejszym umówieniu`} 
+                            {`Godziny otwarcia:\nPon.-Pt. 13:00-19:00\nSobota - po wcześniejszym umówieniu`} 
                         </p>
                     </div>
                     <div className='flex gap-2 justify-center items-start  '>

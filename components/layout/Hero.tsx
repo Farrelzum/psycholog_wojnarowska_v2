@@ -56,7 +56,7 @@ export default function Hero() {
                             <li>
                                 <IconBox
                                     Icon={HandHeart}
-                                    name='Indiwidualne wsparcie i terapia'
+                                    name='Indywidualne wsparcie i terapia'
                                 />
                             </li>
                         </ul>
