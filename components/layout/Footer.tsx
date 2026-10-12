@@ -25,7 +25,7 @@ export default function Footer() {
             />
             <div className='
                 flex flex-col gap-8
-                w-fit mx-auto md:row-start-1
+                w-auto mx-auto md:row-start-1
                 lg:flex-row lg:ml-8
                 lg:col-span-2 lg:justify-start lg:w-full
                 lg:mt-4'>
@@ -44,12 +44,12 @@ export default function Footer() {
                     <div className='flex gap-2 justify-center items-start  '>
                         <Clock className='size-6 text-ivory'/>
                         <p className='
-                            whitespace-pre-wrap
+                            whitespace-pre
                             ml-2 text-white
                             text-[clamp(1rem,3vw,1.2rem)]
                             md:text-base'
                         >
-                            {`Godziny otwarcia:\npon-pt 8:00-18:00`} 
+                            {`Godziny otwarcia:\npon-pt 13:00-19:00\nsobota - po wcześniejszym umówieniu`} 
                         </p>
                     </div>
                     <div className='flex gap-2 justify-center items-start  '>
@@ -60,7 +60,7 @@ export default function Footer() {
                             text-[clamp(1rem,3vw,1.2rem)]
                             md:text-base'
                         >
-                            TEL +48 790 798 993 
+                            Tel. +48 790 798 993 
                         </p>
                     </div>
                 </div>

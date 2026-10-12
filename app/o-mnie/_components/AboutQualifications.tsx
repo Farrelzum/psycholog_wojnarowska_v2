@@ -51,8 +51,7 @@ export default function AboutQualifications() {
               <ul className='text-main font-semibold list-disc list-inside w-full ml-2 md:ml-6 space-y-2'>
                 <li>Terapeuta Integracji Sensorycznej</li>
                 <li className="pl-6 -indent-6">Trener Treningu Umiejętności Społecznych&nbsp;(TUS)</li>
-                <li>Mediator sądowy</li>
-                <li className="pt-4 pl-6 -indent-6">Terapia Skoncentrowana na Rozwiązaniach&nbsp;(TSR)</li>
+                <li className="pl-6 -indent-6">Terapia Skoncentrowana na Rozwiązaniach&nbsp;(TSR)</li>
                 <li className="mt-2 list-none">
                   <span className='font-bold'>Diagnoza psychologiczna z wykorzystaniem wystandaryzowanych narzędzi:</span>
                   <ul className='list-[circle] list-inside w-full mt-3 ml-4 space-y-1'>
@@ -71,6 +70,7 @@ export default function AboutQualifications() {
                     <li>Południowokalifornijskich Testów Integracji Sensorycznej.</li>
                   </ul>
                 </li>
+                <li className="pt-2">Mediator sądowy</li>
               </ul>
             </IvoryTile>
             <h3 className='my-8 text-2xl md:text-3xl lg:text-4xl font-bold text-ivory'>Członkostwo</h3>

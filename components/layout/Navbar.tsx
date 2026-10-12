@@ -63,7 +63,7 @@ export default function NavBar({
                                 lg:font-medium lg:text-lg
                                 rounded btn-focus"
                         >
-                            Oferta
+                            Obszary wspracia
                             <motion.div animate={{ rotate: isOfertaOpen ? 90 : 0 }}>
                                 <Play size={14} />
                             </motion.div>

@@ -17,9 +17,13 @@ export const consultations: PriceList = {
             price: '250',
         },
         {
-            name: 'Konsultacja psychologiczna dla rodziców / konsultacja wychowawcza (50 minut)',
+            name: 'Konsultacja psychologiczna dla rodziców / konsultacja wychowawcza (50\u00A0minut)',
             price: '250',
         },
+        {
+            name: 'Terapia par (60\u00A0minut)',
+            price: '250',
+        }
     ],
 }
 

@@ -55,7 +55,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                             onClick={toggleOferta}
                             className="text-xl text-white font-medium flex items-center gap-1 btn-focus"
                         >
-                            Oferta
+                            Obszary wsparcia
                             <motion.div animate={{ rotate: isOfertaOpen ? 0 : 90 }}>
                                 <Play size={20} className='pt-1'/>
                             </motion.div>
@@ -130,7 +130,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
             </div>
             <div className='flex gap-2 mt-auto justify-evenly w-full'>
                 <motion.a
-                    href="tel:+48798763715"
+                    href="tel:+48790798993"
                     className='
                         flex items-center gap-2
                         border rounded-md text-white p-2'
