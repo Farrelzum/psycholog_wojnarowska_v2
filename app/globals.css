@@ -85,7 +85,7 @@
   }
 
   h1 {
-    @apply text-[5dvh] md:text-[8dvh] text-main font-caveat leading-tight;
+    @apply text-[6dvh] md:text-[10dvh] lg:text-[11dvh] text-main font-caveat leading-tight;
   }
 }
 
