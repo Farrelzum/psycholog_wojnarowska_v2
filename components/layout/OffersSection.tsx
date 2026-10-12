@@ -16,8 +16,8 @@ export default function OffersSection() {
         >
             <h2 className="
                 text-main
-                text-2xl md:text-3xl
-                font-serif
+                text-3xl md:text-5xl
+                font-amatic
                 text-center"
             >
                 Sprawdź, w czym mogę Ci pomóc
@@ -73,6 +73,7 @@ export default function OffersSection() {
                                 />
                                 <h3 className="
                                     p-4 text-center w-full
+                                    font-caveat
                                     text-md md:text-lg lg:text-xl
                                     flex items-center justify-center
                                     min-h-[5rem] md:min-h-[6rem] lg:min-h-[7rem]"

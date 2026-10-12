@@ -8,7 +8,7 @@
             <section className="
             w-full max-w-5xl px-4 md:px-8 pt-12 md:pt-16 flex flex-col items-center"
             >
-            <h1 className="text-3xl lg:text-4xl font-bold text-main mb-6">O mnie</h1>
+            <h1 className="text-2xl lg:text-3xl font-federo font-bold text-main mb-6">O mnie</h1>
             <Image
                 src={aboutImage}
                 alt="Portret psycholog Barbara Wojnarowska w gabinecie"

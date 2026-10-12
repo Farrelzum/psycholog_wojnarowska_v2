@@ -11,6 +11,11 @@
   --color-gold: hsl(var(--button-gold));
   --color-ivory: hsl(var(--ivory));
 
+  --font-lato: var(--font-lato), sans-serif;
+  --font-federo: var(--font-federo), sans-serif;
+  --font-caveat: var(--font-caveat), cursive;
+  --font-amatic: var(--font-amatic), cursive;
+
   /* Twoje kolory gabinetu */
   --color-warm-brown: hsl(var(--warm-brown));
   --color-light-green: hsl(var(--light-green));
@@ -80,7 +85,7 @@
   }
 
   h1 {
-    @apply text-[5dvh] md:text-[8dvh] text-main font-serif leading-tight;
+    @apply text-[5dvh] md:text-[8dvh] text-main font-caveat leading-tight;
   }
 }
 

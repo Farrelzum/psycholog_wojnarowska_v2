@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Lato, Federo, Caveat, Amatic_SC } from 'next/font/google';
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Image from 'next/image';
@@ -33,6 +34,33 @@ export const metadata: Metadata = {
   },
 };
 
+const lato = Lato({ 
+  weight: ['300','400','700'],
+  subsets: ['latin-ext'],
+  variable: '--font-lato',
+  display: 'swap',
+});
+
+const federo = Federo({ 
+  weight: '400', 
+  subsets: ['latin'], 
+  variable: '--font-federo',
+  display: 'swap',
+});
+
+const caveat = Caveat({ 
+  subsets: ['latin-ext'], 
+  variable: '--font-caveat',
+  display: 'swap',
+});
+
+const amatic = Amatic_SC({ 
+  weight: ['400', '700'], 
+  subsets: ['latin-ext'], 
+  variable: '--font-amatic',
+  display: 'swap',
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -42,7 +70,13 @@ export default function RootLayout({
     <html
       lang="pl"
     >
-      <body className="min-h-page flex flex-col">
+      <body className={`
+        ${lato.variable}
+        ${federo.variable} 
+        ${caveat.variable} 
+        ${amatic.variable}
+        min-h-page flex flex-col font-federo
+      `}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

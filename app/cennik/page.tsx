@@ -8,7 +8,7 @@ export default function PriceList() {
       <h1 className="
         text-main mb-6
         text-3xl md:text-4xl
-        font-serif"
+        font-federo"
       >
         Cennik
       </h1>

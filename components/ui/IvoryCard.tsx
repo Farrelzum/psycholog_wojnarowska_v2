@@ -41,6 +41,7 @@
                 </div>
                 <ul className={`
                     text-main font-semibold self-start
+                    font-caveat font-semibold
                     list-disc list-inside w-full
                     ${splitList ?
                         'lg:columns-2 lg:gap-x-8 lg:border lg:border-main lg:p-4 lg:rounded-md lg:shadow-md' : ''}`}
@@ -52,7 +53,7 @@
                                 mb-1 break-inside-avoid
                                 pl-6 -indent-6'
                         >
-                            {el}
+                            {el.toUpperCase()}
                         </li>
                     ))}
                 </ul>
