@@ -29,7 +29,7 @@ export const diagnoses: PriceList =  {
         {
             name: 'Diagnoza inteligencji Stanford\u00A0\u2011\u00A0Binet\u00A05 (SB5)',
             desc: '(wywiad, badanie, analiza wyników oraz pisemna opinia psychologiczna)',
-            price: '800',
+            price: '700',
         },
         {
             name: 'Diagnoza ADHD dzieci i młodzieży',
