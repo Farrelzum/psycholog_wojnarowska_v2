@@ -108,7 +108,7 @@ export default function MenuMobile({ isOfertaOpen, toggleOferta, onClose }: Prop
                                                 font-medium opacity-90
                                                 rounded btn-focus"
                                         >
-                                            <item.Icon size={16} /> {item.name}
+                                            <item.Icon size={16} className="shrink-0"/> {item.name}
                                         </Link>
                                     </li>
                                 ))}

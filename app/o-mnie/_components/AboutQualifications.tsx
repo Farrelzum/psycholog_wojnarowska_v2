@@ -67,7 +67,7 @@ export default function AboutQualifications() {
                     <li>wywiadu z rodzicem</li>
                     <li>kwestionariuszy sensorycznych</li>
                     <li>obserwacji klinicznej</li>
-                    <li>Południowokalifornijskich Testów Integracji Sensorycznej.</li>
+                    <li>Testy Południowo-Kalifornijskie Integracji Sensorycznej.</li>
                   </ul>
                 </li>
                 <li className="pt-2">Mediator sądowy</li>

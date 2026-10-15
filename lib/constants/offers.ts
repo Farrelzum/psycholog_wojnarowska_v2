@@ -20,7 +20,7 @@ import coupleMain from '@/images/offers/coupleMainOffer.jpg';
 
 export const offers: Offer[] = [
         {
-                name: "Pomoc psychologiczna dla dzieci i dorosłych",
+                name: "Wsparcie psychologiczne dzieci, młodzieży i dorosłych",
                 description:
                         "Obserwowanie dziecka, które przeżywa kryzys psychologiczny lub zmaga się z trudnymi emocjami jest trudne.\n\nW pracy z dziećmi i młodzieżą podchodzę do pacjentów z empatią, tworząc dla nich w pełni bezpieczną, opartą na zaufaniu przestrzeń do rozmowy. Nie oceniam zachowania dziecka ani Ciebie jako rodzica – w spokojnym tempie pomagam Wam zrozumieć przyczyny problemów.\n\nCelem wsparcia psychologicznego jest wyposażenie młodego człowieka w narzędzia do radzenia sobie z trudnościami, by pomóc Wam odzyskać równowagę i spokój na co dzień.",
                 price: "200",
@@ -56,7 +56,7 @@ export const offers: Offer[] = [
         {
                 name: "Diagnoza integracji sensorycznej",
                 description: 
-                        "Wiem, jak trudne bywają sytuacje, gdy Twoje dziecko czuje się przytłoczone bodźcami lub reaguje wyjątkowo silnie na otoczenie.D\n\no diagnozy integracji sensorycznej podchodzę z empatią i uważnością na granice małego pacjenta. Zależy mi, aby dziecko czuło się bezpiecznie, dlatego nasze spotkania często przypominają ukierunkowaną zabawę. Nie oceniam zachowania ani metod wychowawczych – w spokojnym tempie pomagam zrozumieć, co komunikuje układ nerwowy dziecka.\n\nCelem diagnozy jest stworzenie profilu sensorycznego, który pomoże Wam odzyskać równowagę i wspierać samoregulację dziecka na co dzień.",
+                        "Wiem, jak trudne bywają sytuacje, gdy Twoje dziecko czuje się przytłoczone bodźcami lub reaguje wyjątkowo silnie na otoczenie.\n\nDo diagnozy integracji sensorycznej podchodzę z empatią i uważnością na granice małego pacjenta. Zależy mi, aby dziecko czuło się bezpiecznie, dlatego nasze spotkania często przypominają ukierunkowaną zabawę. Nie oceniam zachowania ani metod wychowawczych – w spokojnym tempie pomagam zrozumieć, co komunikuje układ nerwowy dziecka.\n\nCelem diagnozy jest stworzenie profilu sensorycznego, który pomoże Wam odzyskać równowagę i wspierać samoregulację dziecka na co dzień.",
                 price: "600",
                 path: "/oferta/diagnoza-integracji-sensorycznej",
                 Icon: Puzzle,
