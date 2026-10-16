@@ -20,7 +20,7 @@ import coupleMain from '@/images/offers/coupleMainOffer.jpg';
 
 export const offers: Offer[] = [
         {
-                name: "Wsparcie psychologiczne dzieci, młodzieży i dorosłych",
+                name: "Wsparcie psychologiczne dzieci, młodzieży i\u00A0dorosłych",
                 description:
                         "Pomagam dzieciom, młodzieży i dorosłym lepiej rozumieć emocje i radzić sobie z codziennymi trudnościami.\n\nW pracy stawiam na empatię, zaufanie i poczucie bezpieczeństwa. Wspieram również rodziców w rozumieniu potrzeb dzieci i szukaniu rozwiązań.\n\nTworzę przestrzeń do rozmowy, w której każdy może poczuć się wysłuchany i zrozumiany.",
                 price: "200",
