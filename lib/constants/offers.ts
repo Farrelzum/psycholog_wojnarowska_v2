@@ -22,7 +22,7 @@ export const offers: Offer[] = [
         {
                 name: "Wsparcie psychologiczne dzieci, młodzieży i dorosłych",
                 description:
-                        "Obserwowanie dziecka, które przeżywa kryzys psychologiczny lub zmaga się z trudnymi emocjami jest trudne.\n\nW pracy z dziećmi i młodzieżą podchodzę do pacjentów z empatią, tworząc dla nich w pełni bezpieczną, opartą na zaufaniu przestrzeń do rozmowy. Nie oceniam zachowania dziecka ani Ciebie jako rodzica – w spokojnym tempie pomagam Wam zrozumieć przyczyny problemów.\n\nCelem wsparcia psychologicznego jest wyposażenie młodego człowieka w narzędzia do radzenia sobie z trudnościami, by pomóc Wam odzyskać równowagę i spokój na co dzień.",
+                        "Pomagam dzieciom, młodzieży i dorosłym lepiej rozumieć emocje i radzić sobie z codziennymi trudnościami.\n\nW pracy stawiam na empatię, zaufanie i poczucie bezpieczeństwa. Wspieram również rodziców w rozumieniu potrzeb dzieci i szukaniu rozwiązań.\n\nTworzę przestrzeń do rozmowy, w której każdy może poczuć się wysłuchany i zrozumiany.",
                 price: "200",
                 path: "/oferta/pomoc",
                 Icon: Baby,
