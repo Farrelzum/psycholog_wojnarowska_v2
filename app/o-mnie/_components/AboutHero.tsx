@@ -1,5 +1,5 @@
     import Image from "next/image";
-    import aboutImage from '@/images/aboutMe/projekt_zdjęcia.png';
+    import aboutImage from '@/images/aboutMe/psychoterapeutka.webp';
     import Divider from "@/components/ui/Divider";
     import { description } from "@/lib/constants/aboutMe";
 
@@ -12,7 +12,7 @@
             <Image
                 src={aboutImage}
                 alt="Portret psycholog Barbara Wojnarowska w gabinecie"
-                className="mb-8 w-full object-cover object-center rounded-md max-h-[60vh]"
+                className="mb-8 w-full h-auto object-top md:object-cover rounded-md"
                 priority
             />
             <Divider className='mb-8 w-full'/>
