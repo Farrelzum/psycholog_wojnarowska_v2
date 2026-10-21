@@ -12,6 +12,8 @@ model User {
     surname         String
     email           String         @unique
     phone           String?
+    login           String
+    password        String
     emailVerified   DateTime?
     role            Role            @default(PATIENT)
     appointments    Appointment[]
