@@ -18,6 +18,7 @@
                             fixed z-50 top-4 left-4 mr-4
                             md:top-auto md:bottom-4 md:left-4
                             px-6 py-3 rounded shadow-lg text-white font-medium
+                            whitespace-pre-line
                             ${status === 'error' ? 'bg-red-600' : 'bg-green-800'}`}
                         initial={{ y: 20, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
