@@ -21,8 +21,8 @@ export const consultations: PriceList = {
             price: '250',
         },
         {
-            name: 'Terapia par (60\u00A0minut)',
-            price: '250',
+            name: 'Terapia par (75\u00A0minut)',
+            price: '350',
         }
     ],
 }

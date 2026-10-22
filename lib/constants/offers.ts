@@ -67,8 +67,8 @@ export const offers: Offer[] = [
         {
                 name: "Terapia par",
                 description:
-                        "Poczucie oddalenia i narastające niezrozumienie w związku bywa bolesne. W terapii par zapewniam bezpieczną, pełną empatii i neutralną przestrzeń, w której każda ze stron jest na równi wysłuchana.\n\nNie oceniam i nie szukam winnego – w spokojnym tempie pomagam zrozumieć mechanizmy napędzające Wasze konflikty. \n\nCelem naszych spotkań nie jest orzekanie o racji, lecz odbudowanie zdrowej komunikacji i wsparcie Was w drodze do ponownego odzyskania bliskości na co dzień.",
-                price: "300",
+                        "Poczucie oddalenia, powracające konflikty i narastające nieporozumienia mogą sprawić, że partnerzy przestają się wzajemnie rozumieć.\n\nPodczas spotkań tworzę przestrzeń do spokojnej rozmowy, w której obie osoby mogą zostać wysłuchane i lepiej zrozumieć swoje potrzeby oraz perspektywę partnera.\n\nW pracy korzystam z podejścia skoncentrowanego na rozwiązaniach. Pomagam parom rozpoznawać to, co już im służy, szukać nowych sposobów porozumiewania się i określać konkretne zmiany, które mogą poprawić ich codzienne życie",
+                price: "350",
                 path: "/oferta/terapia-par",
                 Icon: Heart,
                 image: couple_therapy,
