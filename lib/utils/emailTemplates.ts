@@ -36,10 +36,11 @@ export const getClientEmailHtml = (name: string) => `
                     Psycholog | Terapeuta Integracji Sensorycznej
                 </td>
                 
-                <td style="vertical-align: center; text-align: right; width: 100px;">
+                <td style="vertical-align: middle; text-align: right; width: 100px;">
                     <img 
-                        src="https://i.postimg.cc/65Dx9gk0/favicon-transp.png" 
-                        alt="Logo" 
+                        src="https://psycholog-wojnarowska.pl/favicon-transparent.png" 
+                        alt="Logo"
+                        width="80" 
                         style="display: block; margin-left: auto; max-width: 80px; height: auto;" 
                     />
                 </td>
