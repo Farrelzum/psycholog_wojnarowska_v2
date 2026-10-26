@@ -109,19 +109,6 @@ export default function RegistrationForm() {
                     required
                 />
             </div>
-            <div className="flex flex-col gap-1 md:gap-[0.5rem]">
-                <label htmlFor="dateOfBirth" className="font-medium text-gray-800">
-                    Data urodzenia:
-                </label>
-                <input
-                    type="date"
-                    name="dateOfBirth"
-                    id="dateOfBirth"
-                    defaultValue={state?.fields?.dateOfBirth}
-                    className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
-                    required
-                />
-            </div>
             <motion.button
                 type="submit"
                 disabled={isPending}

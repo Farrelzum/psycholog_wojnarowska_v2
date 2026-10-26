@@ -19,11 +19,6 @@ const patientSchema = z.object({
         .string()
         .min(2, "Nazwisko musi mieć co najmniej 2 znaki")
         .max(30, "Nazwisko zbyt długie. Maksymalnie 30 znaków"),
-    dateOfBirth: z
-        .string()
-        .min(1, "Data urodzenia jest wymagana")
-        .refine((val) => !isNaN(Date.parse(val)), { message: "Nieprawidłowy format daty" })
-        .transform((val) => new Date(val)),
     phone: z
         .string()
         .trim()
@@ -42,7 +37,6 @@ export type ActionState = {
         email?: string;
         name?: string;
         surname?: string;
-        dateOfBirth?: string;
         phone?: string;
     };
 } | null;
@@ -57,7 +51,6 @@ export async function createPatient(
         repeatedPassword: (formData.get("repeatedPassword") as string) ?? "",
         name: (formData.get("name") as string) ?? "",
         surname: (formData.get("surname") as string) ?? "",
-        dateOfBirth: (formData.get("dateOfBirth") as string) ?? "",
         phone: (formData.get("phone") as string) ?? "",
     };
 
@@ -72,7 +65,6 @@ export async function createPatient(
                 email: rawData.email,
                 name: rawData.name,
                 surname: rawData.surname,
-                dateOfBirth: rawData.dateOfBirth,
                 phone: rawData.phone,
             },
         };
@@ -91,7 +83,6 @@ export async function createPatient(
                     email: rawData.email,
                     name: rawData.name,
                     surname: rawData.surname,
-                    dateOfBirth: rawData.dateOfBirth,
                     phone: rawData.phone,
                 },
             };
@@ -105,7 +96,6 @@ export async function createPatient(
                 password: hashedPassword,
                 name: isCorrect.data.name,
                 surname: isCorrect.data.surname,
-                dateOfBirth: isCorrect.data.dateOfBirth,
                 phone: isCorrect.data.phone || null,
                 role: "PATIENT",
             },
@@ -124,7 +114,6 @@ export async function createPatient(
                 email: rawData.email,
                 name: rawData.name,
                 surname: rawData.surname,
-                dateOfBirth: rawData.dateOfBirth,
                 phone: rawData.phone,
             },
         };
