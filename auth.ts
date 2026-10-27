@@ -35,27 +35,33 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                 const email = credentials.email as string;
                 const password = credentials.password as string;
 
+                if (!email || !password) {
+                    return null;
+                }   
+
                 const user = await prisma.user.findUnique({
                     where: {
                         email: email,
                     }
                 });
 
-
-                if (!user) {
-                    throw new Error("Nieprawidłowy email lub hasło");
+                if (!user || !user.password) {
+                    return null;
                 }
 
                 const passwordsMatch = await bcrypt.compare(password, user.password);
 
                 if (!passwordsMatch) {
-                    throw new Error("Nieprawidłowy email lub hasło");
+                    return null;
                 }
 
                 return user;
             },
         })
     ],
+    pages: {
+        signIn: "/zaloguj",
+    },
     callbacks: {
         async jwt({ token, user }) {
             if (user) {

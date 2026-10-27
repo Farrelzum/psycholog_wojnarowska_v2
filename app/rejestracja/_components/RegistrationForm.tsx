@@ -1,12 +1,14 @@
 "use client"
 
-import { useActionState, useEffect } from "react";
+import { useActionState, useEffect, useState } from "react";
 import { createPatient } from "@/actions/users";
 import { useToastStore } from "@/lib/store/useToastStore";
 import { motion } from "framer-motion";
+import { Eye, EyeOff } from "lucide-react";
 
 export default function RegistrationForm() {
     const [state, formAction, isPending] = useActionState(createPatient, null);
+    const [showPassword, setShowPassword] = useState(false);
     const showToast = useToastStore((state) => state.showToast);
 
     useEffect(() => {
@@ -54,17 +56,31 @@ export default function RegistrationForm() {
                 />
             </div>
             <div className="flex flex-col gap-1 md:gap-[0.5rem]">
-                <label htmlFor="password" className="font-medium text-gray-800">
-                    Hasło:
+                <label
+                    htmlFor="password"
+                    className="font-medium text-gray-800"
+                >
+                    Hasło
                 </label>
-                <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Wpisz swoje hasło"
-                    className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
-                    required
-                />
+                <div className="relative w-full">
+                    <input
+                        type={showPassword ? "text" : "password"}
+                        id="password"
+                        name="password"
+                        placeholder="Wpisz swoje hasło"
+                        className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow w-full"
+                        required
+                    />
+
+                    <button
+                        type="button"
+                        onClick={() => setShowPassword(!showPassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-green-800 focus:outline-none transition-colors"
+                        aria-label={showPassword ? "Ukryj hasło" : "Pokaż hasło"}
+                    >
+                        {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                    </button>
+                </div>
             </div>
             <div className="flex flex-col gap-1 md:gap-[0.5rem]">
                 <label htmlFor="repeatedPassword" className="font-medium text-gray-800">
