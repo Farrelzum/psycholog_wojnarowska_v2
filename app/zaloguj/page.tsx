@@ -5,7 +5,7 @@ import bg from '@/images/logIn/bg_login.webp';
 
 export default function LoginPage() {
     return (
-        <main className="flex overflow-y-hidden flex-col items-center p-8">
+        <main className="flex overflow-y-hidden  flex-col items-center p-8">
             <Image 
                 src={bg} 
                 alt="" 
@@ -22,7 +22,7 @@ export default function LoginPage() {
             </h1>
             <div className="
                 w-full max-w-md 
-                mt-2 p-10 
+                mt-2 p-10 bg-opacity-90
                 bg-warm-brown rounded-md shadow-md"
             >
                 <LoginForm />

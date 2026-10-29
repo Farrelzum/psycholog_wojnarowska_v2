@@ -9,8 +9,21 @@ import { Eye, EyeOff } from "lucide-react";
 export default function LoginForm() {
     const [state, formAction, isPending] = useActionState(loginUser, null);
     const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState("");
+    const [rememberMe, setRememberMe] = useState(false);
     const showToast = useToastStore((state) => state.showToast);
     const router = useRouter();
+
+    useEffect(() => {
+        const savedEmail = localStorage.getItem("rememberedEmail");
+        if (savedEmail) {
+            // Dodajemy ten komentarz, żeby linter przestał marudzić:
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setEmail(savedEmail);
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setRememberMe(true);
+        }
+    }, []);
 
     useEffect(() => {
         if (state?.message) {
@@ -19,11 +32,16 @@ export default function LoginForm() {
         }
 
         if (state?.success) {
+            if (rememberMe) {
+                localStorage.setItem("rememberedEmail", email);
+            } else {
+                localStorage.removeItem("rememberedEmail");
+            }
             router.push('/');
             router.refresh();
         }
 
-    }, [state, router, showToast]);
+    }, [state, router, email, rememberMe, showToast]);
 
     return (
         <form
@@ -43,7 +61,8 @@ export default function LoginForm() {
                     type="email"
                     id="email"
                     name="email"
-                    defaultValue={state?.fields?.email}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="twój@email.pl"
                     className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
                     autoComplete="email"
@@ -63,7 +82,7 @@ export default function LoginForm() {
                         id="password"
                         name="password"
                         placeholder="Wpisz swoje hasło"
-                        className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow w-full"
+                        className="p-2 pr-10 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow w-full"
                         autoComplete="current-password"
                         required
                     />
@@ -77,6 +96,21 @@ export default function LoginForm() {
                         {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                     </button>
                 </div>
+            </div>
+            <div className="flex items-center gap-2 md:col-span-2">
+                <input
+                    type="checkbox"
+                    id="remember"
+                    name="remember"
+                    className="
+                        w-4 h-4 text-green-800 accent-green-800
+                        bg-white ring-1 ring-green-800 rounded focus:ring-green-600 "
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                />
+                <label htmlFor="remember" className="text-base text-gray-800 select-none cursor-pointer">
+                    Zapamiętaj mnie
+                </label>
             </div>
             <motion.button
                 type="submit"

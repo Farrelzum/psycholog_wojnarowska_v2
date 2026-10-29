@@ -29,7 +29,10 @@ export async function loginUser(prevState: ActionState, formData: FormData) {
             };
         }
 
-        return { success: true, message: "Zalogowano pomyślnie!" };
+        return { 
+            success: true,
+            message: "Zalogowano pomyślnie!"
+        };
 
     } catch (error) {
         if (error instanceof AuthError) {

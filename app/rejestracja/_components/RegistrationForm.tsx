@@ -9,6 +9,7 @@ import { Eye, EyeOff } from "lucide-react";
 export default function RegistrationForm() {
     const [state, formAction, isPending] = useActionState(createPatient, null);
     const [showPassword, setShowPassword] = useState(false);
+    const [showRePassword, setShowRePassword] = useState(false);
     const showToast = useToastStore((state) => state.showToast);
 
     useEffect(() => {
@@ -86,14 +87,25 @@ export default function RegistrationForm() {
                 <label htmlFor="repeatedPassword" className="font-medium text-gray-800">
                     Powtórz hasło:
                 </label>
-                <input
-                    type="password"
-                    name="repeatedPassword"
-                    id="repeatedPassword"
-                    placeholder="Powtórz swoje hasło"
-                    className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow"
-                    required
-                />
+                                <div className="relative w-full">
+                    <input
+                        type={showRePassword ? "text" : "password"}
+                        id="repeatedPassword"
+                        name="repeatedPassword"
+                        placeholder="Powtórz swoje hasło"
+                        className="p-2 bg-white ring-1 ring-green-800 rounded focus:outline-none focus:ring-2 focus:ring-green-600 transition-shadow w-full"
+                        required
+                    />
+
+                    <button
+                        type="button"
+                        onClick={() => setShowRePassword(!showRePassword)}
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-green-800 focus:outline-none transition-colors"
+                        aria-label={showRePassword ? "Ukryj hasło" : "Pokaż hasło"}
+                    >
+                        {showRePassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                    </button>
+                </div>
             </div>
             <div className="flex flex-col gap-1 md:gap-[0.5rem]">
                 <label htmlFor="name" className="font-medium text-gray-800">
